@@ -1,0 +1,16 @@
+
+.social-bar{
+  color: #888888;
+  position: absolute;
+  margin-left: 730px;
+  margin-top: -20px;
+}
+
+.social-bar a i:hover {
+	color: #FFFFFF;
+}
+
+.social-bar a{
+  color: #555555;
+  font-size: 32px;
+}

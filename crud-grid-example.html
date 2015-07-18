@@ -1,0 +1,721 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Dragome: java to the web</title>
+<script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script><script type="text/javascript" async="" src="http://filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="js/jquery.sharrre.min.js"></script>
+<link type="image/gif" rel="icon" href="resources/dragon.gif">
+<link type="text/css" rel="stylesheet" media="screen" href="resources/css.css">
+<link type="text/css" rel="stylesheet" media="all" href="resources/dragome.css">
+<!-- <link type="text/css" rel="stylesheet" media="all" href="dragome/dragome.css"> -->
+
+<link type="text/css" rel="stylesheet" media="all" href="css/donfork3.css">
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/prettify.css"> -->
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+<link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/solarized-light.css">
+
+<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
+
+<!--
+
+-->
+<script type="text/javascript" src="dragome-resources/dragome-debug.js"></script><script type="text/javascript" src="dragome-resources/js/jquery.js"></script>
+
+<style type="text/css">
+.markdown-body table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all
+}
+
+.markdown-body table th {
+    font-weight: bold
+}
+
+.markdown-body table th,.markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd
+}
+
+.markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: #f8f8f8
+}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15799340-2', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="css/shareme.css"> -->
+<!-- <script src="js/shareme.js"></script> -->
+
+<script type="text/javascript">(function() {
+  var fl = document.createElement('script'); fl.type = 'text/javascript'; fl.async = true; fl.src = document.location.protocol + '//filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fl, s);
+})();</script>
+
+
+<script>
+var flag = true;
+
+function toggleSlide()
+{
+    $(".panel").slideToggle("slide");
+    $("#content").animate({
+	    width:'570px',
+	    height : '350px',
+	    bottom : '+=350'
+    }, 1000)
+
+    flag = !flag;
+}
+
+$(document).ready(function()
+{
+  $(".toggle").click(function()
+  {
+    toggleSlide();
+  });
+	
+  toggleSlide();
+});
+</script>
+
+<meta property="fb:admins" content="fernando.petrola.7">
+
+
+<link type="text/css" rel="stylesheet" href="dragome-resources/css/dragome.css"><script type="text/javascript" src="dragome-resources/js/hashtable.js"></script><script type="text/javascript" src="dragome-resources/js/deflate.js"></script><script type="text/javascript" src="dragome-resources/js/console.js"></script><script type="text/javascript" src="dragome-resources/js/helpers.js"></script><script type="text/javascript" src="dragome-resources/js/String.js"></script><script type="text/javascript" src="dragome-resources/js/jquery.atmosphere.js"></script><script type="text/javascript" src="dragome-resources/js/application.js"></script><script type="text/javascript" src="dragome-resources/js/q-3.0.js"></script><style type="text/css"></style><style type="text/css"></style><script type="text/javascript" src="compiled-js/webapp.js"></script></head>
+
+<body data-twttr-rendered="true" data-template="replaced: body" id="body" style="display:block;"><script>
+	    window.fbAsyncInit = function() {
+	      FB.init({
+	        appId      : '366074906879083',
+	        xfbml      : true,
+	        version    : 'v2.1'
+	      });
+	    };
+
+	    (function(d, s, id){
+	       var js, fjs = d.getElementsByTagName(s)[0];
+	       if (d.getElementById(id)) {return;}
+	       js = d.createElement(s); js.id = id;
+	       js.src = "//connect.facebook.net/en_US/sdk.js";
+	       fjs.parentNode.insertBefore(js, fjs);
+	     }(document, 'script', 'facebook-jssdk'));
+	  </script>
+
+	  <div id="fb-root"></div>
+	  <script>(function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=366074906879083&version=v2.0";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+<div id="body1423799294135">
+
+<div style="position: fixed; right:100px;bottom: 0px; background: white; cursor: hand;" class="toggle"> 
+  <div style=" border: 2px solid; border-radius: 15px ;background:white; margin:7px; padding:7px;">Add a comment</div>
+  <div id="content" class="panel" style="overflow-y: auto; border: 1px solid;">
+    <div class="fb-comments" data-href="http://www.dragome.com" data-numposts="5" data-colorscheme="light"></div>
+  </div>
+</div>
+
+	<div class="forkit-curtain" style="top: -100%;">
+		<div class="close-button"></div>
+		<h2>Dragome exists thanks to your donations</h2>
+		<p>Help us continue to make it better</p>
+		<br>
+
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="BLT2RG6BFKZY8"> <input type="image" border="0" src="images/donate-with-paypal.jpg" name="submit" alt="PayPal - The safer, easier way to pay online!"><br> <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	<a class="forkit" data-text="Dragome" data-text-detached="→ pull down  →" href="https://www.dragome.com" style="-webkit-transform: translate(0px, 0px) rotate(0deg);"><span class="string" style="-webkit-transform: translate(80px, 0px) rotate(0deg);"></span><span class="tag" style="-webkit-transform: translate(80px, -15px) rotate(45deg);">Dragome</span></a>
+
+	<header>
+		<div class="">
+			<div class="sticky-wrapper" style="height: 0px; top: 0px; position: relative;">
+				<section class="fd-tour-sticky">
+					<div class="l-page">
+						<nav class="site-nav">
+						<!--
+							<ul>
+								<li><a href="home.html" class="nav-link product-tab" data-template="home-link">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="features-link">Features</a></li>
+								<li><a href="callback-evictor.html" class="nav-link" data-template="callback-evictor-link">Callback Evictor</a></li>
+								<li><a href="two-minutes-tutorial.html" class="nav-link feature-tab" data-template="two-minutes-tutorial-link">2' Tutorial</a></li>
+								<li><a href="gui-toolkit.html" class="nav-link" data-template="gui-toolkit-link">Gui toolkit</a></li>
+								<li><a href="status.html" class="nav-link" data-template="status-link">Status</a></li>
+								<li><a href="support.html" class="nav-link" data-template="support-link">Support</a></li>
+								<li><a href="license.html" class="nav-link pricing-tab" data-template="license-link">License</a></li>
+							</ul>
+							-->
+						</nav>
+					</div>
+				</section>
+			</div>
+		</div>
+	</header>
+	<div class="inner-banner-strip">
+		<div class="l-page no-clear">
+			<div class="banner-image"></div>
+			<h1 class="k-heading">Open Source</h1>
+		    <div class="social-bar">
+			    <a target="_blank" href="https://www.linkedin.com/groups/Dragome-6782769"><i class="icon-linkedin"></i></a> <a target="_blank" href="https://www.facebook.com/dragome.sdk"><i class="icon-facebook"></i></a> <a target="_blank" href="https://twitter.com/DragomeSDK"><i class="icon-twitter"></i></a> <a target="_blank" href="https://www.youtube.com/channel/UCXZjcxseYx7hMUisAdow41Q"><i class="icon-youtube"></i></a> <a target="_blank" href="https://plus.google.com/113913443614620222247/posts/p/pub"><i class="icon-google-plus"></i></a>
+            </div>
+			<br> <br> <span class="alpha light light"><b>Dragome</b> Web SDK</span> <a target="#" class="btn" href="https://github.com/dragome" style="margin-left: 200px; background-color: #797; border: 10px solid #797; color: white;">fork me on github!</a>
+			<div class="delta top-space-small light">Takes your Java code to the web</div>
+			<img src="resources/dragon.gif" width="120" align="left" alt="">
+		</div>
+	</div>
+	<div class="w-grey">
+		<div class="l-page clearfix">
+			<div class="banner-description">
+				<p>Code in Java, let it transform to javascript, run on browser.</p>
+			</div>
+			<a class="btn" href="https://github.com/dragome" target="#">Download Dragome</a>
+		</div>
+	</div>
+
+	<div>
+		<div id="ccm-layout-wrapper-3694" class="ccm-layout-wrapper">
+			<div id="ccm-layout-bodycontent-32-1" class="ccm-layout ccm-layout-table  ccm-layout-name-BodyContent-Layout-1 ">
+<div class="fg-2" style="position: absolute;">
+        <div class="left-panel" style="min-height: 0px;">
+          <div class="sticky-sidebar-wrapper" style="height: 10px;"><div class="sticky-sidebar" style="width: 200px; top: 60px;">
+            <ul class="nav nav-list nav-sidebar" data-toggle="tab">
+            
+								<li><a href="home.html" class="nav-path-selected active" data-template="replaced: home-link">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: features-link">Features list</a></li>
+								<li><a href="developers-guide.html" class="nav-link feature-tab" data-template="replaced: dev-guide-link">Developer's Guide</a></li>
+								<li><a href="diagrams.html" class="nav-link pricing-tab" data-template="replaced: architecture-link">Architecture</a></li>
+								<li><a href="simple-examples.html" class="nav-link" data-template="replaced: examples-link">Binding tutorial</a></li>
+								<li><a href="html-dom-tutorial.html" class="nav-link" data-template="replaced: gui-toolkit-link">DOM handling tutorial</a></li>
+								<li><a href="status.html" class="nav-link" data-template="replaced: status-link">Project status</a></li>
+								<li><a href="https://groups.google.com/d/forum/dragome" class="nav-link" data-template="replaced: support-link" target="#">Mailing List</a></li>
+								<li><a href="support.html" class="nav-link" data-template="replaced: support-link">Support / Help</a></li>
+								<li><a href="license.html" class="nav-link pricing-tab" data-template="replaced: license-link">License</a></li>
+<!--            
+	            <li class="active nav-path-selected"><a href="/about/" target="_self" class="active nav-path-selected">About us</a></li>
+	            <li class=""><a href="/about/team/" target="_self" class="">Leadership Team</a></li>
+	            <li class=""><a href="/about/investors/" target="_self" class="">Investors</a></li>
+	            <li class=""><a href="/about/careers/" target="_self" class="">Careers</a></li>
+-->
+            </ul>          
+            
+            
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <br> <br> 
+			<input type="hidden" name="cmd" value="_s-xclick">
+			 <input type="hidden" name="hosted_button_id" value="BLT2RG6BFKZY8"> 
+			 <input type="image" border="0" src="images/donate-with-paypal.jpg" name="submit" alt="PayPal - The safer, easier way to pay online!"><br> 
+		</form>
+		
+		            <a class="twitter-timeline" href="https://twitter.com/DragomeSDK" data-widget-id="563180963262627840">Tweets by @DragomeSDK</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+            </div>
+<br><br><div id="example3"><div id="shareme" data-url="http://www.dragome.com/" data-text="Dragome SDK: java to the web" data-title="share this page"></div></div>            
+            </div>          
+        </div>
+      </div>
+				<div class="fc l-page">
+				
+					<div class="fg-12 ">
+						<section class="">
+							<div data-template="replaced: loaded-template-8" id="loaded-template-8" data-component-id="16307430" data-element-id="32217989" class="null"><h1>Creating entity CRUD grid with Dragome SDK</h1>
+<h2>What is Dragome?</h2>
+<p><a href="http://www.dragome.com/" data-template="replaced: link-0" target="#" data-component-id="9538314" onclick="_ed.onEvent()" data-element-id="33550621">Dragome</a> is a software development kit (SDK) for creating RICH Internet Application(RIA). It provides developers a mechanism to write client side application in Java.</p>
+<p>Javascript code is generated directly from bytecode which gives a lot of advantages in comparison to source to source transformations.</p>
+<p>Dragome is open source, completely free, and it is licensed under the GPL v3.0.</p>
+<hr>
+<h2>Why use the Dragome SDK?</h2>
+<ul>
+<li>Code everything in Java (server side and client side), it will be transformed to javascript automatically.</li>
+<li>Higher level of abstraction for GUI development using components.</li>
+<li>High performance for generated client side code.</li>
+<li>Java based development process and code reuse.</li>
+<li>Use the excellent debugging support offered by the mature Java IDEs like Eclipse, developers can debug the client side application just as an Java Application.</li>
+<li>Make use of built-in IDE support to refactor Java code, improve your agile development.</li>
+<li>You will minimize contact with HTML files. Managed by graphics designers not developers, Dragome uses exactly the same files that designers are editing, just plain HTML files.</li>
+<li>UI design updates can be deployed by non developer roles because code is totally decoupled from HTML files.</li>
+<li>Use continuation in your development: you can pause your program and continue it whenever you need.</li>
+<li>Unit testing integration: you can also run your Junit tests on a browser.</li>
+<li>Java 8 enabled.</li>
+</ul>
+<hr>
+<h2>Dragome SDK modules</h2>
+<p>Dragome SDK can be divided into following five major parts:</p>
+<ul>
+<li>Dragome Bytecode to JavaScript compiler : This is the most important part of Dragome which makes it a powerful tool for building RIAs. Dragome compiler is used to translate all the application code written in Java into JavaScript.</li>
+<li>JRE Emulation library : Dragome includes a library that emulates a subset of the Java runtime library.</li>
+<li>Form Bindings: Based on gwt-pectin project this module provides easy data bindings capabilities. It uses a declarative style API (guice style) for defining the models, commands and forms as well as binding them to components.</li>
+<li>Callback evictor: In charge of getting rid of callback hell, it uses bytecode instrumentation and dynamic proxies to do it.</li>
+<li>Method logger: Simple method interceptor for automatic model changes detection, it also make use of bytecode instrumentations.</li>
+</ul>
+<p>Dragome provides two execution modes, production mode for executing everything in client side, and debug mode that executes all in Java Virtual Machine without compiling to javascript and make remotes updates to browser DOM.</p>
+<hr>
+<h2>System Requirements</h2>
+<ul>
+<li>JDK   1.7 or above.</li>
+<li>Memory no minimum requirement.</li>
+<li>Disk space no minimum requirement.</li>
+<li>Operating System no minimum requirement.</li>
+<li><strong>Important note about debugging</strong>: it is not required the use of any plugin for your IDE or for your browser. Applications can be debugged on modern versions of Chrome, Firefox, Opera and IE 11. Safari will be available in future versions.</li>
+</ul>
+<hr>
+<h1>Crud Grid example</h1>
+<p>This example is based on <a href="https://github.com/jonbgallant/AngularJS-WebApi-EF" data-template="replaced: link-1" target="#" data-component-id="6094802" onclick="_ed.onEvent()" data-element-id="4769498">AngularJS CRUD Grid with WebApi, EF, Bootstrap, Font Awesome &amp; Toastr</a>. See original demo <a href="http://angularjs-webapi-crud-grid.azurewebsites.net/" data-template="replaced: link-2" target="#" data-component-id="32207527" onclick="_ed.onEvent()" data-element-id="26240921">here</a>.</p>
+<p><img src="crud-grid1.png" alt="Crud grid example"></p>
+<p>This tutorial is about Dragome version of the same crud grid application. We are using a Java server side service for interacting to a embedded database, through Hibernate for ORM mapping.
+<br>For UI construction we are using Component Builders mechanism provided by Dragome, which handles several similar concepts to AngularJS framework: two-way data binding, switch/case template approach, show or style components using expressions, automatic detection of model changes, event handling, template repeaters with filtering and ordering capabilities, etc.</p>
+<p>Component Builders mechanism is just a layer above Dragome UI components and Form Bindings module, that make components construction a lot easier.</p>
+<p>The same application could be achieved using components directly but is would be more verbose and more
+<br>difficult to implement in order to get same data binding advantages.</p>
+<p>Also it could be implemented by DOM manipulations and direct event handling, just as Dragome components do it internally, but again it could be a lot more verbose, and since there would be almost any abstraction layer in this usage, it could be a very difficult task to accomplish.</p>
+<hr>
+<h2>Server-side code</h2>
+<p>There is only one class in server side, this is the implementation of our service that provides instances of required entities as well as metadata for UI creation.</p>
+<p>It handles interactions to ORM by EntityManager, such as finding, removing, saving and updating entities.
+<br>Also it provides metadata for both entities Place and People.
+<br>See how to use services <a href="http://dragome.sourceforge.net/services.html" data-template="replaced: link-3" target="#" data-component-id="12124640" onclick="_ed.onEvent()" data-element-id="4281487">here</a>.</p>
+<hr>
+<h2>Client-side code</h2>
+<p>All the remaining code is going to be executed at client side, this java code will be transformed to javascript and will be loaded by the browser in order to: create UI, manipulate entities instances, serialize/deserialize data structures, establish communication to server, etc.</p>
+<p>Our first setup is about creating a <strong>CrudGrid</strong> instance, that's the main model we are going to use, passing it which entity we want it to show. Then for start building all components we will use a <strong>ComponentBuilder</strong> constructed with current <strong>VisualPanel</strong>, where all components and subcomponents will be hanging on.
+<br>To see how to use templates take a look at <a href="http://dragome.sourceforge.net/template-engine.html" data-template="replaced: link-4" target="#" data-component-id="27675071" onclick="_ed.onEvent()" data-element-id="8237566">Template Engine</a>.</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="typ">CrudGrid</span><span class="pln"> crudGrid</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CrudGrid</span><span class="pun">(</span><span class="pln">entityType</span><span class="pun">);</span><span class="pln">
+</span><span class="typ">ComponentBuilder</span><span class="pln"> componentBuilder</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ComponentBuilder</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span></code></pre>
+<hr>
+<h3>Filter section</h3>
+<p>First section we are constructing is filter panel.</p>
+<p>A Textfield is binded to <em>filter</em> property of <em>crudGrid</em> instance using <strong>toProperty</strong> method, we've previously chosen <em>VisualTextField</em> component to represent this value in view.</p>
+<p>In “<strong>remove-filter</strong>” case we also add a condition to make it disable when a expression is satisfied.</p>
+<p>For cleaning purposes we attached a click listener to set filter string to empty value, so due two-way data binding filter will be cleaned by clicking this button and automatically <em>filter</em> component (the textfield) will be refreshed with this new value.</p>
+<p><img src="filter-section.png" alt="Filter section"></p>
+<p>Source code</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">private</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> buildFilter</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    componentBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"filter"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualTextField</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">toProperty</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">::</span><span class="pln">getFilter</span><span class="pun">,</span><span class="pln"> crudGrid</span><span class="pun">::</span><span class="pln">setFilter</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">build</span><span class="pun">();</span><span class="pln">
+
+    componentBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"remove-filter"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualLabel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">disableWhen</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">getFilter</span><span class="pun">().</span><span class="pln">length</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">onClick</span><span class="pun">(</span><span class="pln">v </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">setFilter</span><span class="pun">(</span><span class="str">""</span><span class="pun">))</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">build</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Associated HTML fragment</p>
+<pre class="prettyprint language-html java-mod prettyprinted"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group col-md-5 row filter"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group-addon"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"glyphicon glyphicon-filter"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span><span class="pln">
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"filter"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group-addon btn btn-default"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"remove-filter"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"glyphicon glyphicon-remove"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+<hr>
+<h3>Header</h3>
+<p>For “<strong>add-mode-toggler</strong>” we also add a condition but in this case for styling purposes, each style provided will be applied whenever “<strong>accordingTo</strong>” boolean expression takes true or false value.</p>
+<p>At this point we need to create each column header with: sorting behavior, configured style, and showing its name. For repeating “<strong>table-header</strong>” template for each column in <strong>crudGrid.getColumns()</strong> we use “<strong>repeat</strong>” method.</p>
+<p>Repeat method will execute the passing block for each column, this block will receive a column instance and a builder for continuing parent construction and also building new inner components.</p>
+<p><img src="header-section.png" alt="Header section"></p>
+<p>Source code</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">private</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> buildHeader</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    componentBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"add-mode-toggler"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualLabel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">onClick</span><span class="pun">(</span><span class="pln">v </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">toggleAddMode</span><span class="pun">())</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">styleWith</span><span class="pun">(</span><span class="str">"glyphicon-minus"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"glyphicon-plus"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">accordingTo</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">isAddMode</span><span class="pun">())</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">build</span><span class="pun">();</span><span class="pln">
+
+
+    componentBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"table-header"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualPanel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">toList</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">.</span><span class="pln">getColumns</span><span class="pun">())</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">repeat</span><span class="pun">((</span><span class="pln">column</span><span class="pun">,</span><span class="pln"> builder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            builder</span><span class="pun">.</span><span class="pln">onClick</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">setOrderColumn</span><span class="pun">(</span><span class="pln">column</span><span class="pun">)).</span><span class="pln">build</span><span class="pun">();</span><span class="pln">
+            builder</span><span class="pun">.</span><span class="pln">styleWith</span><span class="pun">(</span><span class="pln">column</span><span class="pun">.</span><span class="pln">getStyleName</span><span class="pun">()).</span><span class="pln">when</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">);</span><span class="pln">
+
+            builder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"column-name"</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualLabel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">to</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">getName</span><span class="pun">())</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">build</span><span class="pun">();</span><span class="pln">
+
+            builder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"order-icon"</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualLabel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">styleWith</span><span class="pun">(</span><span class="str">"glyphicon-sort-by-alphabet"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"glyphicon-sort-by-alphabet-alt"</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">accordingTo</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">getOrderColumn</span><span class="pun">().</span><span class="pln">getOrder</span><span class="pun">().</span><span class="pln">equals</span><span class="pun">(</span><span class="typ">Order</span><span class="pun">.</span><span class="pln">ASC</span><span class="pun">))</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">showWhen</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">getOrderColumn</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> column</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">build</span><span class="pun">();</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Associated HTML fragment</p>
+<pre class="prettyprint language-html java-mod prettyprinted"><code><span class="pln">     </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"col-md-1"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-toolbar"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"add-mode-toggler"</span><span class="tag">&gt;&lt;/i&gt;&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/th&gt;</span><span class="pln">
+
+        </span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"table-header"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"column-name"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln">
+                </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"glyphicon"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"order-icon"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span></code></pre>
+<hr>
+<h3>Add section</h3>
+<p>In this section we need to show different components depending on <em>lookup</em> property of the column. To do that we make use of a tool for selecting templates using a expression. We repeat each column as previous section but inside each template we want to show a combobox or textfield depending on if it is a lookup value or not.</p>
+<p>Using <strong>switchWith</strong> command we configure the desire switch expression, then inside children creation we may express default case using <strong>switchDefaultCase</strong> , and <strong>switchCase</strong> for specific case value. Both methods receive a code block that is in charge of building the entire case component/s.</p>
+<p>Only components that belong to current case will be constructed and shown.</p>
+<p><img src="add-section.png" alt="Add section"></p>
+<p>Source code</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">private</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> buildAddSection</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">...</span><span class="pln">
+
+childrenBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"columns"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualPanel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">toList</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">.</span><span class="pln">getColumns</span><span class="pun">())</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">repeat</span><span class="pun">((</span><span class="pln">column</span><span class="pun">,</span><span class="pln"> builder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+        builder</span><span class="pun">.</span><span class="pln">switchWith</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">!</span><span class="pln">column</span><span class="pun">.</span><span class="pln">isLookup</span><span class="pun">()).</span><span class="pln">buildChildren</span><span class="pun">(</span><span class="pln">columnBuilder </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+            columnBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"input"</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">switchDefaultCase</span><span class="pun">((</span><span class="pln">caseBuilder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> 
+                    caseBuilder
+                    </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualTextField</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+                    </span><span class="pun">.</span><span class="pln">toProperty</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">getItem</span><span class="pun">().</span><span class="pln">getObject</span><span class="pun">(),</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">getName</span><span class="pun">())</span><span class="pln">
+                    </span><span class="pun">.</span><span class="pln">disableWhen</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">isAutoincrement</span><span class="pun">())</span><span class="pln">
+                    </span><span class="pun">.</span><span class="pln">build</span><span class="pun">());</span><span class="pln">
+
+            columnBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"select"</span><span class="pun">)</span><span class="pln">
+            </span><span class="pun">.</span><span class="pln">switchCase</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">caseBuilder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> 
+                caseBuilder
+                </span><span class="pun">.</span><span class="pln">to</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">VisualComboBoxImpl</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">.</span><span class="pln">getLookupData</span><span class="pun">(</span><span class="pln">column</span><span class="pun">.</span><span class="pln">getLookupEntityType</span><span class="pun">())))</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">toProperty</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">getItem</span><span class="pun">().</span><span class="pln">getObject</span><span class="pun">(),</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">getName</span><span class="pun">())</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">showWhen</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">isLookup</span><span class="pun">())</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">build</span><span class="pun">());</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+
+</span><span class="pun">....</span></code></pre>
+<p>Associated HTML fragment</p>
+<pre class="prettyprint language-html java-mod prettyprinted"><code><span class="pln">        </span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"columns"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"input"</span><span class="tag">/&gt;</span><span class="pln">
+            </span><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"select"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="tag">&gt;&lt;/select&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span></code></pre>
+<hr>
+<h3>Objects section</h3>
+<p>Using the same mechanism from above to repeat columns we are repeating each item, item class contains a reference to the entity itself. In this case we want repeat them in a particular order and filtering each one by a specific expression.</p>
+<p>For <strong>orderBy</strong> method we specify a getter that allows repeater mechanism to obtain the value to compare to, and we also specify the ascending or descending order we want to use.</p>
+<p>For filter purposes we use <strong>filter</strong> method, specifying a tester supplier to test each item whether it has to be shown or not.</p>
+<p><img src="objects-section.png" alt="Objects section"></p>
+<p>Source code</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">private</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> buildObjects</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    componentBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"objects"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualPanel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">toListProperty</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">::</span><span class="pln">getItems</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">orderBy</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">.</span><span class="pln">getColumnValueGetter</span><span class="pun">(),</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> crudGrid</span><span class="pun">.</span><span class="pln">getOrderColumn</span><span class="pun">().</span><span class="pln">getOrder</span><span class="pun">())</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">filter</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">::</span><span class="pln">getFilterTester</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">repeat</span><span class="pun">((</span><span class="pln">item</span><span class="pun">,</span><span class="pln"> itemBuilder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            buildToolbar</span><span class="pun">(</span><span class="pln">item</span><span class="pun">,</span><span class="pln"> itemBuilder</span><span class="pun">);</span><span class="pln">
+            buildColumns</span><span class="pun">(</span><span class="pln">item</span><span class="pun">,</span><span class="pln"> itemBuilder</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Associated HTML fragment</p>
+<pre class="prettyprint language-html java-mod prettyprinted"><code><span class="pln">    </span><span class="tag">&lt;tr</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"objects"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-toolbar"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"toolbar"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-group"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"view-mode"</span><span class="tag">&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-edit"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"edit"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-trash"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"trash"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-group"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"edit-mode"</span><span class="tag">&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-save"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"save"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-remove"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"remove"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"columns"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"view-mode"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"not-lookup"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln">
+                </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"lookup"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"edit-mode"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"input"</span><span class="tag">/&gt;</span><span class="pln">
+                </span><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"select"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="tag">&gt;&lt;/select&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span></code></pre>
+<hr>
+<h3>Showing values</h3>
+<p>In order to show all column values we need to repeat each one, access the particular value and decide how to show it.</p>
+<p>In this last section we can see the usage of nested switch/cases commands, at top level code we use a switch for selecting <strong>editMode</strong> case (inline editing).</p>
+<p>The second switch is inside edit-mode case, there we need to choose whether to show a textfield or combobox depending on lookup property of current column.</p>
+<p>buildColumns source code</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">private</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> buildColumns</span><span class="pun">(</span><span class="typ">Item</span><span class="pln"> item</span><span class="pun">,</span><span class="pln"> </span><span class="typ">ComponentBuilder</span><span class="pln"> itemBuilder</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    itemBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"columns"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualPanel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">toList</span><span class="pun">(</span><span class="pln">crudGrid</span><span class="pun">.</span><span class="pln">getColumns</span><span class="pun">())</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">repeat</span><span class="pun">((</span><span class="pln">column</span><span class="pun">,</span><span class="pln"> columnBuilder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+            columnBuilder
+                </span><span class="pun">.</span><span class="pln">switchWith</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> item</span><span class="pun">.</span><span class="pln">isEditMode</span><span class="pun">())</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">buildChildren</span><span class="pun">(</span><span class="pln">columnChildrenBuilder </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                    buildViewMode</span><span class="pun">(</span><span class="pln">item</span><span class="pun">,</span><span class="pln"> column</span><span class="pun">,</span><span class="pln"> columnChildrenBuilder</span><span class="pun">);</span><span class="pln">
+                    buildEditMode</span><span class="pun">(</span><span class="pln">item</span><span class="pun">,</span><span class="pln"> column</span><span class="pun">,</span><span class="pln"> columnChildrenBuilder</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">});</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>buildEditMode source code</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">private</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> buildEditMode</span><span class="pun">(</span><span class="typ">Item</span><span class="pln"> item</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Column</span><span class="pln"> column</span><span class="pun">,</span><span class="pln"> </span><span class="typ">ComponentBuilder</span><span class="pln"> columnChildrenBuilder</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    columnChildrenBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"edit-mode"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">switchCase</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">caseBuilder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> caseBuilder
+                </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualPanel</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">switchWith</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">!</span><span class="pln">column</span><span class="pun">.</span><span class="pln">isLookup</span><span class="pun">())</span><span class="pln">
+                </span><span class="pun">.</span><span class="pln">buildChildren</span><span class="pun">(</span><span class="pln">viewModePanelBuilder </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                    viewModePanelBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"input"</span><span class="pun">)</span><span class="pln">
+                        </span><span class="pun">.</span><span class="pln">switchDefaultCase</span><span class="pun">((</span><span class="pln">lookupCaseBuilder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> 
+                            lookupCaseBuilder
+                                </span><span class="pun">.</span><span class="pln">as</span><span class="pun">(</span><span class="typ">VisualTextField</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">)</span><span class="pln">
+                                </span><span class="pun">.</span><span class="pln">toProperty</span><span class="pun">(</span><span class="pln">item</span><span class="pun">.</span><span class="pln">getObject</span><span class="pun">(),</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">getName</span><span class="pun">())</span><span class="pln">
+                                </span><span class="pun">.</span><span class="pln">disableWhen</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">isAutoincrement</span><span class="pun">())</span><span class="pln">
+                                </span><span class="pun">.</span><span class="pln">build</span><span class="pun">());</span><span class="pln">
+
+                    viewModePanelBuilder</span><span class="pun">.</span><span class="pln">bindTemplate</span><span class="pun">(</span><span class="str">"select"</span><span class="pun">)</span><span class="pln">
+                        </span><span class="pun">.</span><span class="pln">switchCase</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">lookupCaseBuilder</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> 
+                            lookupCaseBuilder
+                            </span><span class="pun">.</span><span class="pln">to</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">VisualComboBoxImpl</span><span class="pun">&lt;&gt;(</span><span class="pln">crudGrid</span><span class="pun">.</span><span class="pln">getLookupData</span><span class="pun">(</span><span class="pln">column</span><span class="pun">.</span><span class="pln">getLookupEntityType</span><span class="pun">())))</span><span class="pln">
+                            </span><span class="pun">.</span><span class="pln">toProperty</span><span class="pun">(</span><span class="pln">item</span><span class="pun">.</span><span class="pln">getObject</span><span class="pun">(),</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">getName</span><span class="pun">())</span><span class="pln">
+                            </span><span class="pun">.</span><span class="pln">disableWhen</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> column</span><span class="pun">.</span><span class="pln">isAutoincrement</span><span class="pun">())</span><span class="pln">
+                            </span><span class="pun">.</span><span class="pln">build</span><span class="pun">());</span><span class="pln">
+                </span><span class="pun">}).</span><span class="pln">build</span><span class="pun">();</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<hr>
+<h3>Main model</h3>
+<p>The whole UI is interacting with a model called CrudGrid, that is in charge of storing the information, performing actions over model, communicating to server service, and providing some tools to help builders to create the UI.
+<br>This class is totally decouple from Dragome UI creation, builders, methodlogger or any framework specific mechanism.</p>
+<p>The only coupling point is using ObservableList instances for detecting list changes automatically, but it could be considered framework agnostic because it only interacts with a listener inside.</p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">CrudGrid</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">boolean</span><span class="pln"> loading</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> filter</span><span class="pun">=</span><span class="pln"> </span><span class="str">""</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">boolean</span><span class="pln"> addMode</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Item</span><span class="pun">&gt;</span><span class="pln"> objects</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Item</span><span class="pln"> item</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Column</span><span class="pun">&gt;</span><span class="pln"> columns</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Tester</span><span class="pun">&lt;</span><span class="typ">Item</span><span class="pun">&gt;</span><span class="pln"> filterTester</span><span class="pun">=</span><span class="pln"> updateFilterTester</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Column</span><span class="pln"> orderColumn</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">EntitiesProviderService</span><span class="pln"> entitiesProviderService</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Class</span><span class="pun">&lt;?&gt;</span><span class="pln"> entityType</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">CrudGrid</span><span class="pun">(</span><span class="typ">Class</span><span class="pun">&lt;?&gt;</span><span class="pln"> entityType</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">entityType</span><span class="pun">=</span><span class="pln"> entityType</span><span class="pun">;</span><span class="pln">
+        </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Identifiable</span><span class="pun">&gt;</span><span class="pln"> all</span><span class="pun">=</span><span class="pln"> entitiesProviderService</span><span class="pun">.</span><span class="pln">getAll</span><span class="pun">((</span><span class="typ">Class</span><span class="pun">)</span><span class="pln"> entityType</span><span class="pun">);</span><span class="pln">
+        </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Item</span><span class="pun">&gt;</span><span class="pln"> result</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ArrayList</span><span class="pun">&lt;</span><span class="typ">Item</span><span class="pun">&gt;();</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Identifiable</span><span class="pln"> object </span><span class="pun">:</span><span class="pln"> all</span><span class="pun">)</span><span class="pln">
+            result</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ItemImpl</span><span class="pun">(</span><span class="pln">object</span><span class="pun">));</span><span class="pln">
+
+        objects</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ObservableList</span><span class="pun">&lt;</span><span class="typ">Item</span><span class="pun">&gt;(</span><span class="pln">result</span><span class="pun">);</span><span class="pln">
+        columns</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ObservableList</span><span class="pun">&lt;</span><span class="typ">Column</span><span class="pun">&gt;(</span><span class="pln">entitiesProviderService</span><span class="pun">.</span><span class="pln">getColumnsFor</span><span class="pun">(</span><span class="pln">entityType</span><span class="pun">));</span><span class="pln">
+
+        item</span><span class="pun">=</span><span class="pln"> initItem</span><span class="pun">();</span><span class="pln">
+        orderColumn</span><span class="pun">=</span><span class="pln"> columns</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+
+        setLoading</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> addObject</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        getItems</span><span class="pun">().</span><span class="pln">add</span><span class="pun">(</span><span class="pln">item</span><span class="pun">);</span><span class="pln">
+        </span><span class="typ">Identifiable</span><span class="pln"> added</span><span class="pun">=</span><span class="pln"> entitiesProviderService</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span><span class="pln">item</span><span class="pun">.</span><span class="pln">getObject</span><span class="pun">());</span><span class="pln">
+        item</span><span class="pun">.</span><span class="pln">getObject</span><span class="pun">().</span><span class="pln">setId</span><span class="pun">(</span><span class="pln">added</span><span class="pun">.</span><span class="pln">getId</span><span class="pun">());</span><span class="pln">
+        toggleAddMode</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> deleteObject</span><span class="pun">(</span><span class="typ">Item</span><span class="pln"> item</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        objects</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="pln">item</span><span class="pun">);</span><span class="pln">
+        entitiesProviderService</span><span class="pun">.</span><span class="kwd">delete</span><span class="pun">(</span><span class="pln">item</span><span class="pun">.</span><span class="pln">getObject</span><span class="pun">());</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">...</span></code></pre>
+<hr>
+<h3>Complete template for CrudGridComponent</h3>
+<p>Generally, UI code is related to a HTML template that contains nested elements with data-template attributes, matching the same name of bindTemplate usages.</p>
+<p>You can see there is no coupling between templates and java code, except for those data-template attribute that mark where is each template and subtemplate.</p>
+<p>There is no logic inside templates, they are pure HTML with no special tags and standard attribute usage. It make them interchangeable with other templates with the same specification (same nested data-templates in elements).</p>
+<p>Graphic designers may work decoupled from developers in all development phases, UI design updates can be performed by any role cause there is no intervention from developers perspective required.</p>
+<p><img src="template.png" alt="Template"></p>
+<pre class="prettyprint language-html java-mod prettyprinted"><code><span class="tag">&lt;body&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"loading"</span><span class="tag">&gt;</span><span class="pln">Loading...</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group col-md-5 row filter"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group-addon"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"glyphicon glyphicon-filter"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span><span class="pln">
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"filter"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group-addon btn btn-default"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"remove-filter"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"glyphicon glyphicon-remove"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"crud-grid table table-striped table-bordered table-condensed table-hover"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"col-md-1"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-toolbar"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"add-mode-toggler"</span><span class="tag">&gt;&lt;/i&gt;&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/th&gt;</span><span class="pln">
+
+        </span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"table-header"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"column-name"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln">
+                </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"glyphicon"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"order-icon"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+    </span><span class="tag">&lt;tr</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"add-section"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-toolbar"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-group"</span><span class="tag">&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-save"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"save-button"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-remove"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"remove-button"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"columns"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"input"</span><span class="tag">/&gt;</span><span class="pln">
+            </span><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"select"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="tag">&gt;&lt;/select&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+    </span><span class="tag">&lt;tr</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"objects"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-toolbar"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"toolbar"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-group"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"view-mode"</span><span class="tag">&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-edit"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"edit"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-trash"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"trash"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-group"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"edit-mode"</span><span class="tag">&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-save"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"save"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default glyphicon glyphicon-remove"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"remove"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"columns"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"view-mode"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"not-lookup"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln">
+                </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"lookup"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"edit-mode"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"input"</span><span class="tag">/&gt;</span><span class="pln">
+                </span><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"select"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="tag">&gt;&lt;/select&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+</span><span class="tag">&lt;/table&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span></code></pre>
+</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer class="footer">
+		<!--footer strip -->
+		<!--footer links-->
+		<div class="l-page clearfix footer-wrapper">
+			<div class="fg-6">
+				<div class="fg-4">
+					<ul class="fmenu">
+						<li class="fhead">Dragome</li>
+						<li><a href="home.html" class="nav-link product-tab active" data-template="replaced: footer-home-link">Home</a></li>
+						<li><a href="http://dragome-sdk.blogspot.com" class="nav-link">Blog</a></li>
+						<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: footer-features-link">Features</a></li>
+						<li><a href="dragome.html" class="nav-link feature-tab">Documentation</a></li>
+						<li><a href="dragome.html" class="nav-link pricing-tab">License</a></li>
+						<li><a href="dragome.html" class="nav-link">Support</a></li>
+						<li><a href="dragome.html" class="nav-link">About</a></li>
+					</ul>
+				</div>
+				<div class="fg-5">
+					<ul class="fmenu">
+						<li class="fhead">Demo applications</li>
+						<li><a href="http://www.dragome.com/pricing/free-support-software/">Flashcards</a></li>
+						<li><a href="http://www.dragome.com/pricing/day-pass/">Person crud</a></li>
+						<li><a href="http://www.dragome.com/free-support-tools/help-desk-plugin-mobile-apps">Sync tree views</a></li>
+					</ul>
+				</div>
+				<div class="fg-3 omega">
+					<ul class="fmenu">
+						<li class="fhead">Support</li>
+						<li><a href="http://support.dragome.com/">Help &amp; Support</a></li>
+						<li><a href="http://www.dragome.com/api">API</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fg-6 omega f-s-div">
+				<div class="fg-6">
+					<!--</ul>-->
+					<ul class="f-social">
+						<li>Connect with us</li>
+						<li class="top-space-small" id="footer-social-icons"><a target="_blank" href="https://www.linkedin.com/groups/Dragome-6782769"><i class="icon-linkedin"></i></a> <a target="_blank" href="https://www.facebook.com/dragome.sdk"><i class="icon-facebook"></i></a> <a target="_blank" href="https://twitter.com/DragomeSDK"><i class="icon-twitter"></i></a> <a target="_blank" href="https://www.youtube.com/channel/UCXZjcxseYx7hMUisAdow41Q"><i class="icon-youtube"></i></a> <a target="_blank" href="https://plus.google.com/113913443614620222247/posts/p/pub"><i class="icon-google-plus"></i></a></li>
+					</ul>
+					<div class="fc top-space-large app-widget">
+						<span class="apple"> <a href=""> </a>
+						</span> <span class="android"> <a href=""></a>
+						</span>
+					</div>
+				</div>
+				<div class="fg-6 omega blog-contacts">
+					<ul class="f-contact">
+						<li>Contact Us</li>
+						<li class="top-space-small fc"><i class="icon-envelope-alt"></i> <span class="f-mail-span"><a href="mailto:support@dragome.com" class="f-mail"> support@dragome.com</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="l-page fc copy-separator">
+			<div class="fg-6 footer-bottom-link">
+				<ul class="clearfix">
+					<li><a href="http://www.dragome.com/terms">TERMS OF SERVICE</a></li>
+					<li><a href="http://www.dragome.com/privacy">PRIVACY POLICY</a></li>
+					<li><a href="http://www.dragome.com/security">SECURITY</a></li>
+					<li><a href="http://www.dragome.com/sitemap">SITEMAP</a></li>
+				</ul>
+			</div>
+			<div class="fg-5 omega copy">Copyright © Dragome. All Rights Reserved.</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/forkit.js"></script>
+
+	<a href="https://plus.google.com/113913443614620222247" rel="publisher">Google+</a>
+</div></body><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div>

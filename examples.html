@@ -1,0 +1,319 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Dragome: java to the web</title>
+<script type="text/javascript" async="" src="http://filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="js/jquery.sharrre.min.js"></script>
+<link type="image/gif" rel="icon" href="resources/dragon.gif">
+<link type="text/css" rel="stylesheet" media="screen" href="resources/css.css">
+<link type="text/css" rel="stylesheet" media="all" href="resources/dragome.css">
+<!-- <link type="text/css" rel="stylesheet" media="all" href="dragome/dragome.css"> -->
+
+<link type="text/css" rel="stylesheet" media="all" href="css/donfork3.css">
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/prettify.css"> -->
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+<link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/solarized-light.css">
+
+<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
+
+<!--
+<script type="text/javascript" src="dragome-resources/dragome-debug.js"></script>
+-->
+<style type="text/css"></style><style type="text/css"></style>
+
+<style type="text/css">
+.markdown-body table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all
+}
+
+.markdown-body table th {
+    font-weight: bold
+}
+
+.markdown-body table th,.markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd
+}
+
+.markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: #f8f8f8
+}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15799340-2', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="css/shareme.css"> -->
+<!-- <script src="js/shareme.js"></script> -->
+
+<script type="text/javascript">(function() {
+  var fl = document.createElement('script'); fl.type = 'text/javascript'; fl.async = true; fl.src = document.location.protocol + '//filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fl, s);
+})();</script>
+
+
+<script>
+var flag = true;
+
+function toggleSlide()
+{
+    $(".panel").slideToggle("slide");
+    $("#content").animate({
+	    width:'570px',
+	    height : '350px',
+	    bottom : '+=350'
+    }, 1000)
+
+    flag = !flag;
+}
+
+$(document).ready(function()
+{
+  $(".toggle").click(function()
+  {
+    toggleSlide();
+  });
+	
+  toggleSlide();
+});
+</script>
+
+<meta property="fb:admins" content="fernando.petrola.7">
+
+
+</head>
+
+<body data-template="replaced: body" id="body" style="display:block;"><script>
+	    window.fbAsyncInit = function() {
+	      FB.init({
+	        appId      : '366074906879083',
+	        xfbml      : true,
+	        version    : 'v2.1'
+	      });
+	    };
+
+	    (function(d, s, id){
+	       var js, fjs = d.getElementsByTagName(s)[0];
+	       if (d.getElementById(id)) {return;}
+	       js = d.createElement(s); js.id = id;
+	       js.src = "//connect.facebook.net/en_US/sdk.js";
+	       fjs.parentNode.insertBefore(js, fjs);
+	     }(document, 'script', 'facebook-jssdk'));
+	  </script>
+
+	  <div id="fb-root"></div>
+	  <script>(function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=366074906879083&version=v2.0";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+<div id="body1410494524827">
+
+<div style="position: fixed; right:100px;bottom: 0px; background: white; cursor: hand;" class="toggle"> 
+  <div style=" border: 2px solid; border-radius: 15px ;background:white; margin:7px; padding:7px;">Add a comment</div>
+  <div id="content" class="panel" style="overflow-y: auto; border: 1px solid;">
+    <div class="fb-comments" data-href="http://www.dragome.com" data-numposts="5" data-colorscheme="light"></div>
+  </div>
+</div>
+
+	<div class="forkit-curtain" style="top: -100%;">
+		<div class="close-button"></div>
+		<h2>Dragome exists thanks to your donations</h2>
+		<p>Help us continue to make it better</p>
+		<br>
+
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="BLT2RG6BFKZY8"> <input type="image" border="0" src="images/donate-with-paypal.jpg" name="submit" alt="PayPal - The safer, easier way to pay online!"><br> <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	<a class="forkit" data-text="Dragome" data-text-detached="→ pull down  →" href="https://www.dragome.com" style="-webkit-transform: translate(0px, 0px) rotate(0deg);"><span class="string" style="-webkit-transform: translate(80px, 0px) rotate(0deg);"></span><span class="tag" style="-webkit-transform: translate(80px, -15px) rotate(45deg);">Dragome</span></a>
+
+	<header>
+		<div class="">
+			<div class="sticky-wrapper" style="height: 0px; top: 0px; position: relative;">
+				<section class="fd-tour-sticky">
+					<div class="l-page">
+						<nav class="site-nav">
+						<!--
+							<ul>
+								<li><a href="home.html" class="nav-link product-tab" data-template="home-link">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="features-link">Features</a></li>
+								<li><a href="callback-evictor.html" class="nav-link" data-template="callback-evictor-link">Callback Evictor</a></li>
+								<li><a href="two-minutes-tutorial.html" class="nav-link feature-tab" data-template="two-minutes-tutorial-link">2' Tutorial</a></li>
+								<li><a href="gui-toolkit.html" class="nav-link" data-template="gui-toolkit-link">Gui toolkit</a></li>
+								<li><a href="status.html" class="nav-link" data-template="status-link">Status</a></li>
+								<li><a href="support.html" class="nav-link" data-template="support-link">Support</a></li>
+								<li><a href="license.html" class="nav-link pricing-tab" data-template="license-link">License</a></li>
+							</ul>
+							-->
+						</nav>
+					</div>
+				</section>
+			</div>
+		</div>
+	</header>
+	<div class="inner-banner-strip">
+		<div class="l-page no-clear">
+			<div class="banner-image"></div>
+			<h1 class="k-heading">Open Source</h1>
+			<br> <br> <span class="alpha light light"><b>Dragome</b> Web SDK</span> <a target="#" class="btn" href="https://github.com/dragome" style="margin-left: 200px; background-color: #797; border: 10px solid #797; color: white;">fork me on github!</a>
+			<div class="delta top-space-small light">Takes your Java code to the web</div>
+			<img src="resources/dragon.gif" width="120" align="left" alt="">
+		</div>
+	</div>
+	<div class="w-grey">
+		<div class="l-page clearfix">
+			<div class="banner-description">
+				<p>Code in Java, let it transform to javascript, run on browser.</p>
+			</div>
+			<a class="btn" href="https://github.com/dragome" target="#">Download Dragome</a>
+		</div>
+	</div>
+
+	<div>
+		<div id="ccm-layout-wrapper-3694" class="ccm-layout-wrapper">
+			<div id="ccm-layout-bodycontent-32-1" class="ccm-layout ccm-layout-table  ccm-layout-name-BodyContent-Layout-1 ">
+<div class="fg-2" style="position: absolute;">
+        <div class="left-panel" style="min-height: 0px;">
+          <div class="sticky-sidebar-wrapper" style="height: 10px;"><div class="sticky-sidebar" style="width: 149px; top: 60px;">
+            <ul class="nav nav-list nav-sidebar" data-toggle="tab">
+            
+								<li><a href="home.html" class="nav-path-selected active" data-template="replaced: home-link" data-component-id="5444031" onclick="_ed.onEvent()">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: features-link" data-component-id="1988149" onclick="_ed.onEvent()">Features</a></li>
+								<li><a href="callback-evictor.html" class="nav-link" data-template="replaced: callback-evictor-link" data-component-id="29439761" onclick="_ed.onEvent()">Callback Evictor</a></li>
+								<li><a href="two-minutes-tutorial.html" class="nav-link feature-tab" data-template="replaced: two-minutes-tutorial-link" data-component-id="11331165" onclick="_ed.onEvent()">2' Tutorial</a></li>
+								<li class="nav-path-selected active" ><a href="examples.html" class="nav-link" data-template="replaced: examples-link" data-component-id="3754696" onclick="_ed.onEvent()">Examples</a></li>
+								<li><a href="gui-toolkit.html" class="nav-link" data-template="replaced: gui-toolkit-link" data-component-id="25408516" onclick="_ed.onEvent()">Gui toolkit</a></li>
+								<li><a href="status.html" class="nav-link" data-template="replaced: status-link" data-component-id="31255755" onclick="_ed.onEvent()">Status</a></li>
+								<li><a href="support.html" class="nav-link" data-template="replaced: support-link" data-component-id="658660" onclick="_ed.onEvent()">Support</a></li>
+								<li><a href="license.html" class="nav-link pricing-tab" data-template="replaced: license-link" data-component-id="31479440" onclick="_ed.onEvent()">License</a></li>
+<!--            
+	            <li class="active nav-path-selected"><a href="/about/" target="_self" class="active nav-path-selected">About us</a></li>
+	            <li class=""><a href="/about/team/" target="_self" class="">Leadership Team</a></li>
+	            <li class=""><a href="/about/investors/" target="_self" class="">Investors</a></li>
+	            <li class=""><a href="/about/careers/" target="_self" class="">Careers</a></li>
+-->
+            </ul>          
+            </div>
+<br><br><div id="example3"><div id="shareme" data-url="http://www.dragome.com/" data-text="Dragome SDK: java to the web" data-title="share this page"></div></div>            
+            </div>          
+        </div>
+      </div>
+				<div class="fc l-page">
+				
+					<div class="fg-12 ">
+						<section class="">
+							<div data-template="replaced: loaded-template-11" id="loaded-template-11" data-component-id="27644659" class=""><h1>Dragome Examples</h1>
+<ul>
+<li><a href="todomvc.html" data-template="replaced: link-0" data-component-id="8793371" onclick="_ed.onEvent()">TodoMVC Dragome implementation</a></li>
+<li><a href="crud-grid-example.html" data-template="replaced: link-1" data-component-id="19895655" onclick="_ed.onEvent()">CrudGrid Dragome implementation</a></li>
+<li>Form Bindings: gwt-pectin original binding demo</li>
+<li>FlashCards examples: angular app comparison</li>
+<li>Timer Demo</li>
+<li>Crud using builders</li>
+</ul>
+</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer class="footer">
+		<!--footer strip -->
+		<!--footer links-->
+		<div class="l-page clearfix footer-wrapper">
+			<div class="fg-6">
+				<div class="fg-4">
+					<ul class="fmenu">
+						<li class="fhead">Dragome</li>
+						<li><a href="home.html" class="nav-link product-tab active" data-template="replaced: footer-home-link">Home</a></li>
+						<li><a href="http://dragome-sdk.blogspot.com" class="nav-link">Blog</a></li>
+						<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: footer-features-link">Features</a></li>
+						<li><a href="dragome.html" class="nav-link feature-tab">Documentation</a></li>
+						<li><a href="dragome.html" class="nav-link pricing-tab">License</a></li>
+						<li><a href="dragome.html" class="nav-link">Support</a></li>
+						<li><a href="dragome.html" class="nav-link">About</a></li>
+					</ul>
+				</div>
+				<div class="fg-5">
+					<ul class="fmenu">
+						<li class="fhead">Demo applications</li>
+						<li><a href="http://www.dragome.com/pricing/free-support-software/">Flashcards</a></li>
+						<li><a href="http://www.dragome.com/pricing/day-pass/">Person crud</a></li>
+						<li><a href="http://www.dragome.com/free-support-tools/help-desk-plugin-mobile-apps">Sync tree views</a></li>
+					</ul>
+				</div>
+				<div class="fg-3 omega">
+					<ul class="fmenu">
+						<li class="fhead">Support</li>
+						<li><a href="http://support.dragome.com/">Help &amp; Support</a></li>
+						<li><a href="http://www.dragome.com/api">API</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fg-6 omega f-s-div">
+				<div class="fg-6">
+					<!--</ul>-->
+					<ul class="f-social">
+						<li>Connect with us</li>
+						<li class="top-space-small" id="footer-social-icons"><a target="_blank" href="https://github.com/dragome"><i class="icon-linkedin"></i></a> <a target="_blank" href="https://github.com/dragome"><i class="icon-facebook"></i></a> <a target="_blank" href="https://twitter.com/DragomeSDK"><i class="icon-twitter"></i></a> <a target="_blank" href="https://www.youtube.com/channel/UCXZjcxseYx7hMUisAdow41Q"><i class="icon-youtube"></i></a> <a target="_blank" href="https://github.com/dragome"><i class="icon-google-plus"></i></a></li>
+					</ul>
+					<div class="fc top-space-large app-widget">
+						<span class="apple"> <a href=""> </a>
+						</span> <span class="android"> <a href=""></a>
+						</span>
+					</div>
+				</div>
+				<div class="fg-6 omega blog-contacts">
+					<ul class="f-contact">
+						<li>Contact Us</li>
+						<li class="top-space-small fc"><i class="icon-envelope-alt"></i> <span class="f-mail-span"><a href="mailto:support@dragome.com" class="f-mail"> support@dragome.com</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="l-page fc copy-separator">
+			<div class="fg-6 footer-bottom-link">
+				<ul class="clearfix">
+					<li><a href="http://www.dragome.com/terms">TERMS OF SERVICE</a></li>
+					<li><a href="http://www.dragome.com/privacy">PRIVACY POLICY</a></li>
+					<li><a href="http://www.dragome.com/security">SECURITY</a></li>
+					<li><a href="http://www.dragome.com/sitemap">SITEMAP</a></li>
+				</ul>
+			</div>
+			<div class="fg-5 omega copy">Copyright © Dragome. All Rights Reserved.</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/forkit.js"></script>
+
+</div></body><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div>

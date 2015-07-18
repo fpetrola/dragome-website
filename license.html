@@ -1,0 +1,536 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Dragome: java to the web</title>
+<script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script><script type="text/javascript" async="" src="http://filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="js/jquery.sharrre.min.js"></script>
+<link type="image/gif" rel="icon" href="resources/dragon.gif">
+<link type="text/css" rel="stylesheet" media="screen" href="resources/css.css">
+<link type="text/css" rel="stylesheet" media="all" href="resources/dragome.css">
+<!-- <link type="text/css" rel="stylesheet" media="all" href="dragome/dragome.css"> -->
+
+<link type="text/css" rel="stylesheet" media="all" href="css/donfork3.css">
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/prettify.css"> -->
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+<link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/solarized-light.css">
+
+<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
+
+<!--
+
+-->
+<script type="text/javascript" src="dragome-resources/dragome-debug.js"></script><script type="text/javascript" src="dragome-resources/js/jquery.js"></script>
+
+<style type="text/css">
+.markdown-body table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all
+}
+
+.markdown-body table th {
+    font-weight: bold
+}
+
+.markdown-body table th,.markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd
+}
+
+.markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: #f8f8f8
+}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15799340-2', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="css/shareme.css"> -->
+<!-- <script src="js/shareme.js"></script> -->
+
+<script type="text/javascript">(function() {
+  var fl = document.createElement('script'); fl.type = 'text/javascript'; fl.async = true; fl.src = document.location.protocol + '//filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fl, s);
+})();</script>
+
+
+<script>
+var flag = true;
+
+function toggleSlide()
+{
+    $(".panel").slideToggle("slide");
+    $("#content").animate({
+	    width:'570px',
+	    height : '350px',
+	    bottom : '+=350'
+    }, 1000)
+
+    flag = !flag;
+}
+
+$(document).ready(function()
+{
+  $(".toggle").click(function()
+  {
+    toggleSlide();
+  });
+	
+  toggleSlide();
+});
+</script>
+
+<meta property="fb:admins" content="fernando.petrola.7">
+
+
+<link type="text/css" rel="stylesheet" href="dragome-resources/css/dragome.css"><script type="text/javascript" src="dragome-resources/js/hashtable.js"></script><script type="text/javascript" src="dragome-resources/js/deflate.js"></script><script type="text/javascript" src="dragome-resources/js/console.js"></script><script type="text/javascript" src="dragome-resources/js/helpers.js"></script><script type="text/javascript" src="dragome-resources/js/String.js"></script><script type="text/javascript" src="dragome-resources/js/jquery.atmosphere.js"></script><script type="text/javascript" src="dragome-resources/js/application.js"></script><script type="text/javascript" src="dragome-resources/js/q-3.0.js"></script><style type="text/css"></style><style type="text/css"></style><script type="text/javascript" src="compiled-js/webapp.js"></script></head>
+
+<body data-twttr-rendered="true" data-template="replaced: body" id="body" style="display:block;"><script>
+	    window.fbAsyncInit = function() {
+	      FB.init({
+	        appId      : '366074906879083',
+	        xfbml      : true,
+	        version    : 'v2.1'
+	      });
+	    };
+
+	    (function(d, s, id){
+	       var js, fjs = d.getElementsByTagName(s)[0];
+	       if (d.getElementById(id)) {return;}
+	       js = d.createElement(s); js.id = id;
+	       js.src = "//connect.facebook.net/en_US/sdk.js";
+	       fjs.parentNode.insertBefore(js, fjs);
+	     }(document, 'script', 'facebook-jssdk'));
+	  </script>
+
+	  <div id="fb-root"></div>
+	  <script>(function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=366074906879083&version=v2.0";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+<div id="body1423799405668">
+
+<div style="position: fixed; right:100px;bottom: 0px; background: white; cursor: hand;" class="toggle"> 
+  <div style=" border: 2px solid; border-radius: 15px ;background:white; margin:7px; padding:7px;">Add a comment</div>
+  <div id="content" class="panel" style="overflow-y: auto; border: 1px solid;">
+    <div class="fb-comments" data-href="http://www.dragome.com" data-numposts="5" data-colorscheme="light"></div>
+  </div>
+</div>
+
+	<div class="forkit-curtain" style="top: -100%;">
+		<div class="close-button"></div>
+		<h2>Dragome exists thanks to your donations</h2>
+		<p>Help us continue to make it better</p>
+		<br>
+
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="BLT2RG6BFKZY8"> <input type="image" border="0" src="images/donate-with-paypal.jpg" name="submit" alt="PayPal - The safer, easier way to pay online!"><br> <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	<a class="forkit" data-text="Dragome" data-text-detached="→ pull down  →" href="https://www.dragome.com" style="-webkit-transform: translate(0px, 0px) rotate(0deg);"><span class="string" style="-webkit-transform: translate(80px, 0px) rotate(0deg);"></span><span class="tag" style="-webkit-transform: translate(80px, -15px) rotate(45deg);">Dragome</span></a>
+
+	<header>
+		<div class="">
+			<div class="sticky-wrapper" style="height: 0px; top: 0px; position: relative;">
+				<section class="fd-tour-sticky">
+					<div class="l-page">
+						<nav class="site-nav">
+						<!--
+							<ul>
+								<li><a href="home.html" class="nav-link product-tab" data-template="home-link">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="features-link">Features</a></li>
+								<li><a href="callback-evictor.html" class="nav-link" data-template="callback-evictor-link">Callback Evictor</a></li>
+								<li><a href="two-minutes-tutorial.html" class="nav-link feature-tab" data-template="two-minutes-tutorial-link">2' Tutorial</a></li>
+								<li><a href="gui-toolkit.html" class="nav-link" data-template="gui-toolkit-link">Gui toolkit</a></li>
+								<li><a href="status.html" class="nav-link" data-template="status-link">Status</a></li>
+								<li><a href="support.html" class="nav-link" data-template="support-link">Support</a></li>
+								<li class="nav-path-selected active" ><a href="license.html" class="nav-link pricing-tab" data-template="license-link">License</a></li>
+							</ul>
+							-->
+						</nav>
+					</div>
+				</section>
+			</div>
+		</div>
+	</header>
+	<div class="inner-banner-strip">
+		<div class="l-page no-clear">
+			<div class="banner-image"></div>
+			<h1 class="k-heading">Open Source</h1>
+		    <div class="social-bar">
+			    <a target="_blank" href="https://www.linkedin.com/groups/Dragome-6782769"><i class="icon-linkedin"></i></a> <a target="_blank" href="https://www.facebook.com/dragome.sdk"><i class="icon-facebook"></i></a> <a target="_blank" href="https://twitter.com/DragomeSDK"><i class="icon-twitter"></i></a> <a target="_blank" href="https://www.youtube.com/channel/UCXZjcxseYx7hMUisAdow41Q"><i class="icon-youtube"></i></a> <a target="_blank" href="https://plus.google.com/113913443614620222247/posts/p/pub"><i class="icon-google-plus"></i></a>
+            </div>
+			<br> <br> <span class="alpha light light"><b>Dragome</b> Web SDK</span> <a target="#" class="btn" href="https://github.com/dragome" style="margin-left: 200px; background-color: #797; border: 10px solid #797; color: white;">fork me on github!</a>
+			<div class="delta top-space-small light">Takes your Java code to the web</div>
+			<img src="resources/dragon.gif" width="120" align="left" alt="">
+		</div>
+	</div>
+	<div class="w-grey">
+		<div class="l-page clearfix">
+			<div class="banner-description">
+				<p>Code in Java, let it transform to javascript, run on browser.</p>
+			</div>
+			<a class="btn" href="https://github.com/dragome" target="#">Download Dragome</a>
+		</div>
+	</div>
+
+	<div>
+		<div id="ccm-layout-wrapper-3694" class="ccm-layout-wrapper">
+			<div id="ccm-layout-bodycontent-32-1" class="ccm-layout ccm-layout-table  ccm-layout-name-BodyContent-Layout-1 ">
+<div class="fg-2" style="position: absolute;">
+        <div class="left-panel" style="min-height: 0px;">
+          <div class="sticky-sidebar-wrapper" style="height: 10px;"><div class="sticky-sidebar" style="width: 200px; top: 60px;">
+            <ul class="nav nav-list nav-sidebar" data-toggle="tab">
+            
+								<li><a href="home.html" class="nav-path-selected active" data-template="replaced: home-link">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: features-link">Features list</a></li>
+								<li><a href="developers-guide.html" class="nav-link feature-tab" data-template="replaced: dev-guide-link">Developer's Guide</a></li>
+								<li><a href="diagrams.html" class="nav-link pricing-tab" data-template="replaced: architecture-link">Architecture</a></li>
+								<li><a href="simple-examples.html" class="nav-link" data-template="replaced: examples-link">Binding tutorial</a></li>
+								<li><a href="html-dom-tutorial.html" class="nav-link" data-template="replaced: gui-toolkit-link">DOM handling tutorial</a></li>
+								<li><a href="status.html" class="nav-link" data-template="replaced: status-link">Project status</a></li>
+								<li><a href="https://groups.google.com/d/forum/dragome" class="nav-link" data-template="replaced: support-link" target="#">Mailing List</a></li>
+								<li><a href="support.html" class="nav-link" data-template="replaced: support-link">Support / Help</a></li>
+								<li class="nav-path-selected active" ><a href="license.html" class="nav-link pricing-tab" data-template="replaced: license-link">License</a></li>
+<!--            
+	            <li class="active nav-path-selected"><a href="/about/" target="_self" class="active nav-path-selected">About us</a></li>
+	            <li class=""><a href="/about/team/" target="_self" class="">Leadership Team</a></li>
+	            <li class=""><a href="/about/investors/" target="_self" class="">Investors</a></li>
+	            <li class=""><a href="/about/careers/" target="_self" class="">Careers</a></li>
+-->
+            </ul>          
+            
+            
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <br> <br> 
+			<input type="hidden" name="cmd" value="_s-xclick">
+			 <input type="hidden" name="hosted_button_id" value="BLT2RG6BFKZY8"> 
+			 <input type="image" border="0" src="images/donate-with-paypal.jpg" name="submit" alt="PayPal - The safer, easier way to pay online!"><br> 
+		</form>
+		
+		            <a class="twitter-timeline" href="https://twitter.com/DragomeSDK" data-widget-id="563180963262627840">Tweets by @DragomeSDK</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+            </div>
+<br><br><div id="example3"><div id="shareme" data-url="http://www.dragome.com/" data-text="Dragome SDK: java to the web" data-title="share this page"></div></div>            
+            </div>          
+        </div>
+      </div>
+				<div class="fc l-page">
+				
+					<div class="fg-12 ">
+						<section class="">
+							<div data-template="replaced: loaded-template-15" id="loaded-template-15" data-component-id="27929030" data-element-id="22434825" class="null"><h1>Contributors</h1>
+<p>If you are a developer and want to contribute to Dragome please read: <a href="cla.html" data-template="replaced: link-0" data-component-id="12889879" onclick="_ed.onEvent()" data-element-id="28517546">Contributor License Agreement</a></p>
+<h1>License</h1>
+<p>Terms of Service</p>
+<p>The Dragome software and sample code developed by Fernando Petrola is published under the Apache v2 License for clientside/runtime distributable code.
+<br>The code used only in compile and debugging time is published under GNU Public License version 3.
+<br>The exact terms of this license can be found in the “dragome-LICENSE.txt” file.
+<br>For all 3rd party libraries facilitated by Dragome their individual licenses apply. These can be found in the “3rdparty-LICENSE” folder.</p>
+<pre class="prettyprint language-text java-mod prettyprinted"><code><span class="pln">                                 </span><span class="typ">Apache</span><span class="pln"> </span><span class="typ">License</span><span class="pln">
+                           </span><span class="typ">Version</span><span class="pln"> </span><span class="lit">2.0</span><span class="pun">,</span><span class="pln"> </span><span class="typ">January</span><span class="pln"> </span><span class="lit">2004</span><span class="pln">
+                        http</span><span class="pun">:</span><span class="com">//www.apache.org/licenses/</span><span class="pln">
+
+   TERMS AND CONDITIONS FOR USE</span><span class="pun">,</span><span class="pln"> REPRODUCTION</span><span class="pun">,</span><span class="pln"> AND DISTRIBUTION
+
+   </span><span class="lit">1.</span><span class="pln"> </span><span class="typ">Definitions</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"License"</span><span class="pln"> shall mean the terms </span><span class="kwd">and</span><span class="pln"> conditions </span><span class="kwd">for</span><span class="pln"> </span><span class="kwd">use</span><span class="pun">,</span><span class="pln"> reproduction</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">and</span><span class="pln"> distribution </span><span class="kwd">as</span><span class="pln"> </span><span class="kwd">defined</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> </span><span class="typ">Sections</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> through </span><span class="lit">9</span><span class="pln"> of </span><span class="kwd">this</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"Licensor"</span><span class="pln"> shall mean the copyright owner </span><span class="kwd">or</span><span class="pln"> entity authorized </span><span class="kwd">by</span><span class="pln">
+      the copyright owner that </span><span class="kwd">is</span><span class="pln"> granting the </span><span class="typ">License</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"Legal Entity"</span><span class="pln"> shall mean the </span><span class="kwd">union</span><span class="pln"> of the acting entity </span><span class="kwd">and</span><span class="pln"> all
+      other entities that control</span><span class="pun">,</span><span class="pln"> are controlled </span><span class="kwd">by</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> are under common
+      control </span><span class="kwd">with</span><span class="pln"> that entity</span><span class="pun">.</span><span class="pln"> </span><span class="typ">For</span><span class="pln"> the purposes of </span><span class="kwd">this</span><span class="pln"> definition</span><span class="pun">,</span><span class="pln">
+      </span><span class="str">"control"</span><span class="pln"> means </span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> the power</span><span class="pun">,</span><span class="pln"> direct </span><span class="kwd">or</span><span class="pln"> indirect</span><span class="pun">,</span><span class="pln"> to cause the
+      direction </span><span class="kwd">or</span><span class="pln"> management of such entity</span><span class="pun">,</span><span class="pln"> whether </span><span class="kwd">by</span><span class="pln"> contract </span><span class="kwd">or</span><span class="pln">
+      otherwise</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ii</span><span class="pun">)</span><span class="pln"> ownership of fifty percent </span><span class="pun">(</span><span class="lit">50</span><span class="pun">%)</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> more of the
+      outstanding shares</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="pun">(</span><span class="pln">iii</span><span class="pun">)</span><span class="pln"> beneficial ownership of such entity</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"You"</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">or</span><span class="pln"> </span><span class="str">"Your"</span><span class="pun">)</span><span class="pln"> shall mean an individual </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Legal</span><span class="pln"> </span><span class="typ">Entity</span><span class="pln">
+      exercising permissions granted </span><span class="kwd">by</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"Source"</span><span class="pln"> form shall mean the preferred form </span><span class="kwd">for</span><span class="pln"> making modifications</span><span class="pun">,</span><span class="pln">
+      including but </span><span class="kwd">not</span><span class="pln"> limited to software source code</span><span class="pun">,</span><span class="pln"> documentation
+      source</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> configuration files</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"Object"</span><span class="pln"> form shall mean any form resulting </span><span class="kwd">from</span><span class="pln"> mechanical
+      transformation </span><span class="kwd">or</span><span class="pln"> translation of a </span><span class="typ">Source</span><span class="pln"> form</span><span class="pun">,</span><span class="pln"> including but
+      </span><span class="kwd">not</span><span class="pln"> limited to compiled </span><span class="kwd">object</span><span class="pln"> code</span><span class="pun">,</span><span class="pln"> generated documentation</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">and</span><span class="pln"> conversions to other media types</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"Work"</span><span class="pln"> shall mean the work of authorship</span><span class="pun">,</span><span class="pln"> whether </span><span class="kwd">in</span><span class="pln"> </span><span class="typ">Source</span><span class="pln"> </span><span class="kwd">or</span><span class="pln">
+      </span><span class="typ">Object</span><span class="pln"> form</span><span class="pun">,</span><span class="pln"> made available under the </span><span class="typ">License</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> indicated </span><span class="kwd">by</span><span class="pln"> a
+      copyright notice that </span><span class="kwd">is</span><span class="pln"> included </span><span class="kwd">in</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> attached to the work
+      </span><span class="pun">(</span><span class="pln">an example </span><span class="kwd">is</span><span class="pln"> provided </span><span class="kwd">in</span><span class="pln"> the </span><span class="typ">Appendix</span><span class="pln"> below</span><span class="pun">).</span><span class="pln">
+
+      </span><span class="str">"Derivative Works"</span><span class="pln"> shall mean any work</span><span class="pun">,</span><span class="pln"> whether </span><span class="kwd">in</span><span class="pln"> </span><span class="typ">Source</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Object</span><span class="pln">
+      form</span><span class="pun">,</span><span class="pln"> that </span><span class="kwd">is</span><span class="pln"> based on </span><span class="pun">(</span><span class="kwd">or</span><span class="pln"> derived </span><span class="kwd">from</span><span class="pun">)</span><span class="pln"> the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> which the
+      editorial revisions</span><span class="pun">,</span><span class="pln"> annotations</span><span class="pun">,</span><span class="pln"> elaborations</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> other modifications
+      represent</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> a whole</span><span class="pun">,</span><span class="pln"> an original work of authorship</span><span class="pun">.</span><span class="pln"> </span><span class="typ">For</span><span class="pln"> the purposes
+      of </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> shall </span><span class="kwd">not</span><span class="pln"> include works that remain
+      separable </span><span class="kwd">from</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> merely link </span><span class="pun">(</span><span class="kwd">or</span><span class="pln"> bind </span><span class="kwd">by</span><span class="pln"> name</span><span class="pun">)</span><span class="pln"> to the interfaces of</span><span class="pun">,</span><span class="pln">
+      the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> thereof</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="str">"Contribution"</span><span class="pln"> shall mean any work of authorship</span><span class="pun">,</span><span class="pln"> including
+      the original version of the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> any modifications </span><span class="kwd">or</span><span class="pln"> additions
+      to that </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> thereof</span><span class="pun">,</span><span class="pln"> that </span><span class="kwd">is</span><span class="pln"> intentionally
+      submitted to </span><span class="typ">Licensor</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> inclusion </span><span class="kwd">in</span><span class="pln"> the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> the copyright owner
+      </span><span class="kwd">or</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> an individual </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Legal</span><span class="pln"> </span><span class="typ">Entity</span><span class="pln"> authorized to submit on behalf of
+      the copyright owner</span><span class="pun">.</span><span class="pln"> </span><span class="typ">For</span><span class="pln"> the purposes of </span><span class="kwd">this</span><span class="pln"> definition</span><span class="pun">,</span><span class="pln"> </span><span class="str">"submitted"</span><span class="pln">
+      means any form of electronic</span><span class="pun">,</span><span class="pln"> verbal</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> written communication sent
+      to the </span><span class="typ">Licensor</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> its representatives</span><span class="pun">,</span><span class="pln"> including but </span><span class="kwd">not</span><span class="pln"> limited to
+      communication on electronic mailing lists</span><span class="pun">,</span><span class="pln"> source code control systems</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">and</span><span class="pln"> issue tracking systems that are managed </span><span class="kwd">by</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> on behalf of</span><span class="pun">,</span><span class="pln"> the
+      </span><span class="typ">Licensor</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> the purpose of discussing </span><span class="kwd">and</span><span class="pln"> improving the </span><span class="typ">Work</span><span class="pun">,</span><span class="pln"> but
+      excluding communication that </span><span class="kwd">is</span><span class="pln"> conspicuously marked </span><span class="kwd">or</span><span class="pln"> otherwise
+      designated </span><span class="kwd">in</span><span class="pln"> writing </span><span class="kwd">by</span><span class="pln"> the copyright owner </span><span class="kwd">as</span><span class="pln"> </span><span class="str">"Not a Contribution."</span><span class="pln">
+
+      </span><span class="str">"Contributor"</span><span class="pln"> shall mean </span><span class="typ">Licensor</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> any individual </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Legal</span><span class="pln"> </span><span class="typ">Entity</span><span class="pln">
+      on behalf of whom a </span><span class="typ">Contribution</span><span class="pln"> has been received </span><span class="kwd">by</span><span class="pln"> </span><span class="typ">Licensor</span><span class="pln"> </span><span class="kwd">and</span><span class="pln">
+      subsequently incorporated within the </span><span class="typ">Work</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">2.</span><span class="pln"> </span><span class="typ">Grant</span><span class="pln"> of </span><span class="typ">Copyright</span><span class="pln"> </span><span class="typ">License</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Subject</span><span class="pln"> to the terms </span><span class="kwd">and</span><span class="pln"> conditions of
+      </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">,</span><span class="pln"> each </span><span class="typ">Contributor</span><span class="pln"> hereby grants to </span><span class="typ">You</span><span class="pln"> a perpetual</span><span class="pun">,</span><span class="pln">
+      worldwide</span><span class="pun">,</span><span class="pln"> non</span><span class="pun">-</span><span class="pln">exclusive</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">no</span><span class="pun">-</span><span class="pln">charge</span><span class="pun">,</span><span class="pln"> royalty</span><span class="pun">-</span><span class="pln">free</span><span class="pun">,</span><span class="pln"> irrevocable
+      copyright license to reproduce</span><span class="pun">,</span><span class="pln"> prepare </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> of</span><span class="pun">,</span><span class="pln">
+      publicly display</span><span class="pun">,</span><span class="pln"> publicly perform</span><span class="pun">,</span><span class="pln"> sublicense</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> distribute the
+      </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> such </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> </span><span class="typ">Source</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Object</span><span class="pln"> form</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">3.</span><span class="pln"> </span><span class="typ">Grant</span><span class="pln"> of </span><span class="typ">Patent</span><span class="pln"> </span><span class="typ">License</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Subject</span><span class="pln"> to the terms </span><span class="kwd">and</span><span class="pln"> conditions of
+      </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">,</span><span class="pln"> each </span><span class="typ">Contributor</span><span class="pln"> hereby grants to </span><span class="typ">You</span><span class="pln"> a perpetual</span><span class="pun">,</span><span class="pln">
+      worldwide</span><span class="pun">,</span><span class="pln"> non</span><span class="pun">-</span><span class="pln">exclusive</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">no</span><span class="pun">-</span><span class="pln">charge</span><span class="pun">,</span><span class="pln"> royalty</span><span class="pun">-</span><span class="pln">free</span><span class="pun">,</span><span class="pln"> irrevocable
+      </span><span class="pun">(</span><span class="kwd">except</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> stated </span><span class="kwd">in</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> section</span><span class="pun">)</span><span class="pln"> patent license to make</span><span class="pun">,</span><span class="pln"> have made</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">use</span><span class="pun">,</span><span class="pln"> offer to sell</span><span class="pun">,</span><span class="pln"> sell</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">import</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> otherwise transfer the </span><span class="typ">Work</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">where</span><span class="pln"> such license applies only to those patent claims licensable
+      </span><span class="kwd">by</span><span class="pln"> such </span><span class="typ">Contributor</span><span class="pln"> that are necessarily infringed </span><span class="kwd">by</span><span class="pln"> their
+      </span><span class="typ">Contribution</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln"> alone </span><span class="kwd">or</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> combination of their </span><span class="typ">Contribution</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">with</span><span class="pln"> the </span><span class="typ">Work</span><span class="pln"> to which such </span><span class="typ">Contribution</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln"> was submitted</span><span class="pun">.</span><span class="pln"> </span><span class="typ">If</span><span class="pln"> </span><span class="typ">You</span><span class="pln">
+      institute patent litigation against any entity </span><span class="pun">(</span><span class="pln">including a
+      cross</span><span class="pun">-</span><span class="pln">claim </span><span class="kwd">or</span><span class="pln"> counterclaim </span><span class="kwd">in</span><span class="pln"> a lawsuit</span><span class="pun">)</span><span class="pln"> alleging that the </span><span class="typ">Work</span><span class="pln">
+      </span><span class="kwd">or</span><span class="pln"> a </span><span class="typ">Contribution</span><span class="pln"> incorporated within the </span><span class="typ">Work</span><span class="pln"> constitutes direct
+      </span><span class="kwd">or</span><span class="pln"> contributory patent infringement</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> any patent licenses
+      granted to </span><span class="typ">You</span><span class="pln"> under </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> that </span><span class="typ">Work</span><span class="pln"> shall terminate
+      </span><span class="kwd">as</span><span class="pln"> of the date such litigation </span><span class="kwd">is</span><span class="pln"> filed</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">4.</span><span class="pln"> </span><span class="typ">Redistribution</span><span class="pun">.</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> may reproduce </span><span class="kwd">and</span><span class="pln"> distribute copies of the
+      </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> thereof </span><span class="kwd">in</span><span class="pln"> any medium</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">with</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> without
+      modifications</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> </span><span class="typ">Source</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Object</span><span class="pln"> form</span><span class="pun">,</span><span class="pln"> provided that </span><span class="typ">You</span><span class="pln">
+      meet the following conditions</span><span class="pun">:</span><span class="pln">
+
+      </span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> must give any other recipients of the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">or</span><span class="pln">
+          </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> a copy of </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">and</span><span class="pln">
+
+      </span><span class="pun">(</span><span class="pln">b</span><span class="pun">)</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> must cause any modified files to carry prominent notices
+          stating that </span><span class="typ">You</span><span class="pln"> changed the files</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">and</span><span class="pln">
+
+      </span><span class="pun">(</span><span class="pln">c</span><span class="pun">)</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> must retain</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> the </span><span class="typ">Source</span><span class="pln"> form of any </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln">
+          that </span><span class="typ">You</span><span class="pln"> distribute</span><span class="pun">,</span><span class="pln"> all copyright</span><span class="pun">,</span><span class="pln"> patent</span><span class="pun">,</span><span class="pln"> trademark</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln">
+          attribution notices </span><span class="kwd">from</span><span class="pln"> the </span><span class="typ">Source</span><span class="pln"> form of the </span><span class="typ">Work</span><span class="pun">,</span><span class="pln">
+          excluding those notices that </span><span class="kwd">do</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> pertain to any part of
+          the </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">and</span><span class="pln">
+
+      </span><span class="pun">(</span><span class="pln">d</span><span class="pun">)</span><span class="pln"> </span><span class="typ">If</span><span class="pln"> the </span><span class="typ">Work</span><span class="pln"> includes a </span><span class="str">"NOTICE"</span><span class="pln"> text file </span><span class="kwd">as</span><span class="pln"> part of its
+          distribution</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> any </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> that </span><span class="typ">You</span><span class="pln"> distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file</span><span class="pun">,</span><span class="pln"> excluding those notices that </span><span class="kwd">do</span><span class="pln"> </span><span class="kwd">not</span><span class="pln">
+          pertain to any part of the </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> at least one
+          of the following places</span><span class="pun">:</span><span class="pln"> within a NOTICE text file distributed
+          </span><span class="kwd">as</span><span class="pln"> part of the </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pun">;</span><span class="pln"> within the </span><span class="typ">Source</span><span class="pln"> form </span><span class="kwd">or</span><span class="pln">
+          documentation</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> provided along </span><span class="kwd">with</span><span class="pln"> the </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">or</span><span class="pun">,</span><span class="pln">
+          within a display generated </span><span class="kwd">by</span><span class="pln"> the </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="kwd">and</span><span class="pln">
+          wherever such third</span><span class="pun">-</span><span class="pln">party notices normally appear</span><span class="pun">.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> contents
+          of the NOTICE file are </span><span class="kwd">for</span><span class="pln"> informational purposes only </span><span class="kwd">and</span><span class="pln">
+          </span><span class="kwd">do</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> modify the </span><span class="typ">License</span><span class="pun">.</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> may add </span><span class="typ">Your</span><span class="pln"> own attribution
+          notices within </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> that </span><span class="typ">You</span><span class="pln"> distribute</span><span class="pun">,</span><span class="pln"> alongside
+          </span><span class="kwd">or</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> an addendum to the NOTICE text </span><span class="kwd">from</span><span class="pln"> the </span><span class="typ">Work</span><span class="pun">,</span><span class="pln"> provided
+          that such additional attribution notices cannot be construed
+          </span><span class="kwd">as</span><span class="pln"> modifying the </span><span class="typ">License</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="typ">You</span><span class="pln"> may add </span><span class="typ">Your</span><span class="pln"> own copyright statement to </span><span class="typ">Your</span><span class="pln"> modifications </span><span class="kwd">and</span><span class="pln">
+      may provide additional </span><span class="kwd">or</span><span class="pln"> different license terms </span><span class="kwd">and</span><span class="pln"> conditions
+      </span><span class="kwd">for</span><span class="pln"> </span><span class="kwd">use</span><span class="pun">,</span><span class="pln"> reproduction</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> distribution of </span><span class="typ">Your</span><span class="pln"> modifications</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln">
+      </span><span class="kwd">for</span><span class="pln"> any such </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> a whole</span><span class="pun">,</span><span class="pln"> provided </span><span class="typ">Your</span><span class="pln"> </span><span class="kwd">use</span><span class="pun">,</span><span class="pln">
+      reproduction</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> distribution of the </span><span class="typ">Work</span><span class="pln"> otherwise complies </span><span class="kwd">with</span><span class="pln">
+      the conditions stated </span><span class="kwd">in</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">5.</span><span class="pln"> </span><span class="typ">Submission</span><span class="pln"> of </span><span class="typ">Contributions</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Unless</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> explicitly state otherwise</span><span class="pun">,</span><span class="pln">
+      any </span><span class="typ">Contribution</span><span class="pln"> intentionally submitted </span><span class="kwd">for</span><span class="pln"> inclusion </span><span class="kwd">in</span><span class="pln"> the </span><span class="typ">Work</span><span class="pln">
+      </span><span class="kwd">by</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> to the </span><span class="typ">Licensor</span><span class="pln"> shall be under the terms </span><span class="kwd">and</span><span class="pln"> conditions of
+      </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">,</span><span class="pln"> without any additional terms </span><span class="kwd">or</span><span class="pln"> conditions</span><span class="pun">.</span><span class="pln">
+      </span><span class="typ">Notwithstanding</span><span class="pln"> the above</span><span class="pun">,</span><span class="pln"> nothing herein shall supersede </span><span class="kwd">or</span><span class="pln"> modify
+      the terms of any separate license agreement you may have executed
+      </span><span class="kwd">with</span><span class="pln"> </span><span class="typ">Licensor</span><span class="pln"> regarding such </span><span class="typ">Contributions</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">6.</span><span class="pln"> </span><span class="typ">Trademarks</span><span class="pun">.</span><span class="pln"> </span><span class="typ">This</span><span class="pln"> </span><span class="typ">License</span><span class="pln"> does </span><span class="kwd">not</span><span class="pln"> grant permission to </span><span class="kwd">use</span><span class="pln"> the trade
+      names</span><span class="pun">,</span><span class="pln"> trademarks</span><span class="pun">,</span><span class="pln"> service marks</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> product names of the </span><span class="typ">Licensor</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">except</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> required </span><span class="kwd">for</span><span class="pln"> reasonable </span><span class="kwd">and</span><span class="pln"> customary </span><span class="kwd">use</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> describing the
+      origin of the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> reproducing the content of the NOTICE file</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">7.</span><span class="pln"> </span><span class="typ">Disclaimer</span><span class="pln"> of </span><span class="typ">Warranty</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Unless</span><span class="pln"> required </span><span class="kwd">by</span><span class="pln"> applicable law </span><span class="kwd">or</span><span class="pln">
+      agreed to </span><span class="kwd">in</span><span class="pln"> writing</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Licensor</span><span class="pln"> provides the </span><span class="typ">Work</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">and</span><span class="pln"> each
+      </span><span class="typ">Contributor</span><span class="pln"> provides its </span><span class="typ">Contributions</span><span class="pun">)</span><span class="pln"> on an </span><span class="str">"AS IS"</span><span class="pln"> BASIS</span><span class="pun">,</span><span class="pln">
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND</span><span class="pun">,</span><span class="pln"> either express </span><span class="kwd">or</span><span class="pln">
+      implied</span><span class="pun">,</span><span class="pln"> including</span><span class="pun">,</span><span class="pln"> without limitation</span><span class="pun">,</span><span class="pln"> any warranties </span><span class="kwd">or</span><span class="pln"> conditions
+      of TITLE</span><span class="pun">,</span><span class="pln"> NON</span><span class="pun">-</span><span class="pln">INFRINGEMENT</span><span class="pun">,</span><span class="pln"> MERCHANTABILITY</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> FITNESS FOR A
+      PARTICULAR PURPOSE</span><span class="pun">.</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> are solely responsible </span><span class="kwd">for</span><span class="pln"> determining the
+      appropriateness of </span><span class="kwd">using</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> redistributing the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> assume any
+      risks associated </span><span class="kwd">with</span><span class="pln"> </span><span class="typ">Your</span><span class="pln"> exercise of permissions under </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">8.</span><span class="pln"> </span><span class="typ">Limitation</span><span class="pln"> of </span><span class="typ">Liability</span><span class="pun">.</span><span class="pln"> </span><span class="typ">In</span><span class="pln"> </span><span class="kwd">no</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> under </span><span class="kwd">no</span><span class="pln"> legal theory</span><span class="pun">,</span><span class="pln">
+      whether </span><span class="kwd">in</span><span class="pln"> tort </span><span class="pun">(</span><span class="pln">including negligence</span><span class="pun">),</span><span class="pln"> contract</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> otherwise</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">unless</span><span class="pln"> required </span><span class="kwd">by</span><span class="pln"> applicable law </span><span class="pun">(</span><span class="pln">such </span><span class="kwd">as</span><span class="pln"> deliberate </span><span class="kwd">and</span><span class="pln"> grossly
+      negligent acts</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> agreed to </span><span class="kwd">in</span><span class="pln"> writing</span><span class="pun">,</span><span class="pln"> shall any </span><span class="typ">Contributor</span><span class="pln"> be
+      liable to </span><span class="typ">You</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> damages</span><span class="pun">,</span><span class="pln"> including any direct</span><span class="pun">,</span><span class="pln"> indirect</span><span class="pun">,</span><span class="pln"> special</span><span class="pun">,</span><span class="pln">
+      incidental</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> consequential damages of any character arising </span><span class="kwd">as</span><span class="pln"> a
+      result of </span><span class="kwd">this</span><span class="pln"> </span><span class="typ">License</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="kwd">out</span><span class="pln"> of the </span><span class="kwd">use</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> inability to </span><span class="kwd">use</span><span class="pln"> the
+      </span><span class="typ">Work</span><span class="pln"> </span><span class="pun">(</span><span class="pln">including but </span><span class="kwd">not</span><span class="pln"> limited to damages </span><span class="kwd">for</span><span class="pln"> loss of goodwill</span><span class="pun">,</span><span class="pln">
+      work stoppage</span><span class="pun">,</span><span class="pln"> computer failure </span><span class="kwd">or</span><span class="pln"> malfunction</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> any </span><span class="kwd">and</span><span class="pln"> all
+      other commercial damages </span><span class="kwd">or</span><span class="pln"> losses</span><span class="pun">),</span><span class="pln"> even </span><span class="kwd">if</span><span class="pln"> such </span><span class="typ">Contributor</span><span class="pln">
+      has been advised of the possibility of such damages</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="lit">9.</span><span class="pln"> </span><span class="typ">Accepting</span><span class="pln"> </span><span class="typ">Warranty</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Additional</span><span class="pln"> </span><span class="typ">Liability</span><span class="pun">.</span><span class="pln"> </span><span class="typ">While</span><span class="pln"> redistributing
+      the </span><span class="typ">Work</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="typ">Derivative</span><span class="pln"> </span><span class="typ">Works</span><span class="pln"> thereof</span><span class="pun">,</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> may choose to offer</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">and</span><span class="pln"> charge a fee </span><span class="kwd">for</span><span class="pun">,</span><span class="pln"> acceptance of support</span><span class="pun">,</span><span class="pln"> warranty</span><span class="pun">,</span><span class="pln"> indemnity</span><span class="pun">,</span><span class="pln">
+      </span><span class="kwd">or</span><span class="pln"> other liability obligations </span><span class="kwd">and</span><span class="pun">/</span><span class="kwd">or</span><span class="pln"> rights consistent </span><span class="kwd">with</span><span class="pln"> </span><span class="kwd">this</span><span class="pln">
+      </span><span class="typ">License</span><span class="pun">.</span><span class="pln"> </span><span class="typ">However</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> accepting such obligations</span><span class="pun">,</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> may act only
+      on </span><span class="typ">Your</span><span class="pln"> own behalf </span><span class="kwd">and</span><span class="pln"> on </span><span class="typ">Your</span><span class="pln"> sole responsibility</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> on behalf
+      of any other </span><span class="typ">Contributor</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> only </span><span class="kwd">if</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> agree to indemnify</span><span class="pun">,</span><span class="pln">
+      defend</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> hold each </span><span class="typ">Contributor</span><span class="pln"> harmless </span><span class="kwd">for</span><span class="pln"> any liability
+      incurred </span><span class="kwd">by</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> claims asserted against</span><span class="pun">,</span><span class="pln"> such </span><span class="typ">Contributor</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> reason
+      of your accepting any such warranty </span><span class="kwd">or</span><span class="pln"> additional liability</span><span class="pun">.</span><span class="pln">
+
+   </span><span class="kwd">END</span><span class="pln"> OF TERMS AND CONDITIONS
+
+   APPENDIX</span><span class="pun">:</span><span class="pln"> </span><span class="typ">How</span><span class="pln"> to apply the </span><span class="typ">Apache</span><span class="pln"> </span><span class="typ">License</span><span class="pln"> to your work</span><span class="pun">.</span><span class="pln">
+
+      </span><span class="typ">To</span><span class="pln"> apply the </span><span class="typ">Apache</span><span class="pln"> </span><span class="typ">License</span><span class="pln"> to your work</span><span class="pun">,</span><span class="pln"> attach the following
+      boilerplate notice</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">with</span><span class="pln"> the fields enclosed </span><span class="kwd">by</span><span class="pln"> brackets </span><span class="str">"[]"</span><span class="pln">
+      replaced </span><span class="kwd">with</span><span class="pln"> your own identifying information</span><span class="pun">.</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Don</span><span class="str">'t include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</span></code></pre>
+</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer class="footer">
+		<!--footer strip -->
+		<!--footer links-->
+		<div class="l-page clearfix footer-wrapper">
+			<div class="fg-6">
+				<div class="fg-4">
+					<ul class="fmenu">
+						<li class="fhead">Dragome</li>
+						<li><a href="home.html" class="nav-link product-tab active" data-template="replaced: footer-home-link">Home</a></li>
+						<li><a href="http://dragome-sdk.blogspot.com" class="nav-link">Blog</a></li>
+						<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: footer-features-link">Features</a></li>
+						<li><a href="dragome.html" class="nav-link feature-tab">Documentation</a></li>
+						<li><a href="dragome.html" class="nav-link pricing-tab">License</a></li>
+						<li><a href="dragome.html" class="nav-link">Support</a></li>
+						<li><a href="dragome.html" class="nav-link">About</a></li>
+					</ul>
+				</div>
+				<div class="fg-5">
+					<ul class="fmenu">
+						<li class="fhead">Demo applications</li>
+						<li><a href="http://www.dragome.com/pricing/free-support-software/">Flashcards</a></li>
+						<li><a href="http://www.dragome.com/pricing/day-pass/">Person crud</a></li>
+						<li><a href="http://www.dragome.com/free-support-tools/help-desk-plugin-mobile-apps">Sync tree views</a></li>
+					</ul>
+				</div>
+				<div class="fg-3 omega">
+					<ul class="fmenu">
+						<li class="fhead">Support</li>
+						<li><a href="http://support.dragome.com/">Help &amp; Support</a></li>
+						<li><a href="http://www.dragome.com/api">API</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fg-6 omega f-s-div">
+				<div class="fg-6">
+					<!--</ul>-->
+					<ul class="f-social">
+						<li>Connect with us</li>
+						<li class="top-space-small" id="footer-social-icons"><a target="_blank" href="https://www.linkedin.com/groups/Dragome-6782769"><i class="icon-linkedin"></i></a> <a target="_blank" href="https://www.facebook.com/dragome.sdk"><i class="icon-facebook"></i></a> <a target="_blank" href="https://twitter.com/DragomeSDK"><i class="icon-twitter"></i></a> <a target="_blank" href="https://www.youtube.com/channel/UCXZjcxseYx7hMUisAdow41Q"><i class="icon-youtube"></i></a> <a target="_blank" href="https://plus.google.com/113913443614620222247/posts/p/pub"><i class="icon-google-plus"></i></a></li>
+					</ul>
+					<div class="fc top-space-large app-widget">
+						<span class="apple"> <a href=""> </a>
+						</span> <span class="android"> <a href=""></a>
+						</span>
+					</div>
+				</div>
+				<div class="fg-6 omega blog-contacts">
+					<ul class="f-contact">
+						<li>Contact Us</li>
+						<li class="top-space-small fc"><i class="icon-envelope-alt"></i> <span class="f-mail-span"><a href="mailto:support@dragome.com" class="f-mail"> support@dragome.com</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="l-page fc copy-separator">
+			<div class="fg-6 footer-bottom-link">
+				<ul class="clearfix">
+					<li><a href="http://www.dragome.com/terms">TERMS OF SERVICE</a></li>
+					<li><a href="http://www.dragome.com/privacy">PRIVACY POLICY</a></li>
+					<li><a href="http://www.dragome.com/security">SECURITY</a></li>
+					<li><a href="http://www.dragome.com/sitemap">SITEMAP</a></li>
+				</ul>
+			</div>
+			<div class="fg-5 omega copy">Copyright © Dragome. All Rights Reserved.</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/forkit.js"></script>
+
+	<a href="https://plus.google.com/113913443614620222247" rel="publisher">Google+</a>
+</div><script src="https://syndication.twitter.com/widgets/timelines/paged/563180963262627840?dnt=false&amp;domain=localhost%3A8080&amp;lang=en&amp;since_id=565017459200368640&amp;callback=__twttr.callbacks.tlPoll_563180963262627840_1_565017459200368640&amp;suppress_response_codes=true" async=""></script></body><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div><div class="dragome-hide"></div>

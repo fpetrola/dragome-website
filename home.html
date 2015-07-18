@@ -1,0 +1,544 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Dragome: java to the web</title>
+<script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script><script type="text/javascript" async="" src="http://filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="js/jquery.sharrre.min.js"></script>
+<link type="image/gif" rel="icon" href="resources/dragon.gif">
+<link type="text/css" rel="stylesheet" media="screen" href="resources/css.css">
+<link type="text/css" rel="stylesheet" media="all" href="resources/dragome.css">
+<!-- <link type="text/css" rel="stylesheet" media="all" href="dragome/dragome.css"> -->
+
+<link type="text/css" rel="stylesheet" media="all" href="css/donfork3.css">
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/prettify.css"> -->
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/sons-of-obsidian.css"> -->
+<link type="text/css" rel="stylesheet" media="all" href="google-code-prettify/solarized-light.css">
+
+<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
+
+<!--
+
+-->
+<script type="text/javascript" src="dragome-resources/dragome-debug.js"></script><script type="text/javascript" src="dragome-resources/js/jquery.js"></script>
+
+<style type="text/css">
+.markdown-body table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all
+}
+
+.markdown-body table th {
+    font-weight: bold
+}
+
+.markdown-body table th,.markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd
+}
+
+.markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: #f8f8f8
+}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15799340-2', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+<!-- <link type="text/css" rel="stylesheet" media="all" href="css/shareme.css"> -->
+<!-- <script src="js/shareme.js"></script> -->
+
+<script type="text/javascript">(function() {
+  var fl = document.createElement('script'); fl.type = 'text/javascript'; fl.async = true; fl.src = document.location.protocol + '//filamentapp.s3.amazonaws.com/f95cbd9c699d40507eae55a56326065a.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fl, s);
+})();</script>
+
+
+<script>
+var flag = true;
+
+function toggleSlide()
+{
+    $(".panel").slideToggle("slide");
+    $("#content").animate({
+	    width:'570px',
+	    height : '350px',
+	    bottom : '+=350'
+    }, 1000)
+
+    flag = !flag;
+}
+
+$(document).ready(function()
+{
+  $(".toggle").click(function()
+  {
+    toggleSlide();
+  });
+	
+  toggleSlide();
+});
+</script>
+
+<meta property="fb:admins" content="fernando.petrola.7">
+
+
+<link type="text/css" rel="stylesheet" href="dragome-resources/css/dragome.css"><script type="text/javascript" src="dragome-resources/js/hashtable.js"></script><script type="text/javascript" src="dragome-resources/js/deflate.js"></script><script type="text/javascript" src="dragome-resources/js/console.js"></script><script type="text/javascript" src="dragome-resources/js/helpers.js"></script><script type="text/javascript" src="dragome-resources/js/String.js"></script><script type="text/javascript" src="dragome-resources/js/jquery.atmosphere.js"></script><script type="text/javascript" src="dragome-resources/js/application.js"></script><script type="text/javascript" src="dragome-resources/js/q-3.0.js"></script><style type="text/css"></style><style type="text/css"></style><script type="text/javascript" src="compiled-js/webapp.js"></script></head>
+
+<body data-twttr-rendered="true" data-template="replaced: body" id="body" style="display:block;"><script>
+	    window.fbAsyncInit = function() {
+	      FB.init({
+	        appId      : '366074906879083',
+	        xfbml      : true,
+	        version    : 'v2.1'
+	      });
+	    };
+
+	    (function(d, s, id){
+	       var js, fjs = d.getElementsByTagName(s)[0];
+	       if (d.getElementById(id)) {return;}
+	       js = d.createElement(s); js.id = id;
+	       js.src = "//connect.facebook.net/en_US/sdk.js";
+	       fjs.parentNode.insertBefore(js, fjs);
+	     }(document, 'script', 'facebook-jssdk'));
+	  </script>
+
+	  <div id="fb-root"></div>
+	  <script>(function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=366074906879083&version=v2.0";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+<div id="body1423799166349">
+
+<div style="position: fixed; right:100px;bottom: 0px; background: white; cursor: hand;" class="toggle"> 
+  <div style=" border: 2px solid; border-radius: 15px ;background:white; margin:7px; padding:7px;">Add a comment</div>
+  <div id="content" class="panel" style="overflow-y: auto; border: 1px solid;">
+    <div class="fb-comments" data-href="http://www.dragome.com" data-numposts="5" data-colorscheme="light"></div>
+  </div>
+</div>
+
+	<div class="forkit-curtain" style="top: -100%;">
+		<div class="close-button"></div>
+		<h2>Dragome exists thanks to your donations</h2>
+		<p>Help us continue to make it better</p>
+		<br>
+
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="BLT2RG6BFKZY8"> <input type="image" border="0" src="images/donate-with-paypal.jpg" name="submit" alt="PayPal - The safer, easier way to pay online!"><br> <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	<a class="forkit" data-text="Dragome" data-text-detached="→ pull down  →" href="https://www.dragome.com" style="-webkit-transform: translate(0px, 0px) rotate(0deg);"><span class="string" style="-webkit-transform: translate(80px, 0px) rotate(0deg);"></span><span class="tag" style="-webkit-transform: translate(80px, -15px) rotate(45deg);">Dragome</span></a>
+
+	<header>
+		<div class="">
+			<div class="sticky-wrapper" style="height: 0px; top: 0px; position: relative;">
+				<section class="fd-tour-sticky">
+					<div class="l-page">
+						<nav class="site-nav">
+						<!--
+							<ul>
+								<li class="nav-path-selected active" ><a href="home.html" class="nav-link product-tab" data-template="home-link">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="features-link">Features</a></li>
+								<li><a href="callback-evictor.html" class="nav-link" data-template="callback-evictor-link">Callback Evictor</a></li>
+								<li><a href="two-minutes-tutorial.html" class="nav-link feature-tab" data-template="two-minutes-tutorial-link">2' Tutorial</a></li>
+								<li><a href="gui-toolkit.html" class="nav-link" data-template="gui-toolkit-link">Gui toolkit</a></li>
+								<li><a href="status.html" class="nav-link" data-template="status-link">Status</a></li>
+								<li><a href="support.html" class="nav-link" data-template="support-link">Support</a></li>
+								<li><a href="license.html" class="nav-link pricing-tab" data-template="license-link">License</a></li>
+							</ul>
+							-->
+						</nav>
+					</div>
+				</section>
+			</div>
+		</div>
+	</header>
+	<div class="inner-banner-strip">
+		<div class="l-page no-clear">
+			<div class="banner-image"></div>
+			<h1 class="k-heading">Open Source</h1>
+		    <div class="social-bar">
+			    <a target="_blank" href="https://www.linkedin.com/groups/Dragome-6782769"><i class="icon-linkedin"></i></a> <a target="_blank" href="https://www.facebook.com/dragome.sdk"><i class="icon-facebook"></i></a> <a target="_blank" href="https://twitter.com/DragomeSDK"><i class="icon-twitter"></i></a> <a target="_blank" href="https://www.youtube.com/channel/UCXZjcxseYx7hMUisAdow41Q"><i class="icon-youtube"></i></a> <a target="_blank" href="https://plus.google.com/113913443614620222247/posts/p/pub"><i class="icon-google-plus"></i></a>
+            </div>
+			<br> <br> <span class="alpha light light"><b>Dragome</b> Web SDK</span> <a target="#" class="btn" href="https://github.com/dragome" style="margin-left: 200px; background-color: #797; border: 10px solid #797; color: white;">fork me on github!</a>
+			<div class="delta top-space-small light">Takes your Java code to the web</div>
+			<img src="resources/dragon.gif" width="120" align="left" alt="">
+		</div>
+	</div>
+	<div class="w-grey">
+		<div class="l-page clearfix">
+			<div class="banner-description">
+				<p>Code in Java, let it transform to javascript, run on browser.</p>
+			</div>
+			<a class="btn" href="https://github.com/dragome" target="#">Download Dragome</a>
+		</div>
+	</div>
+
+	<div>
+		<div id="ccm-layout-wrapper-3694" class="ccm-layout-wrapper">
+			<div id="ccm-layout-bodycontent-32-1" class="ccm-layout ccm-layout-table  ccm-layout-name-BodyContent-Layout-1 ">
+<div class="fg-2" style="position: absolute;">
+        <div class="left-panel" style="min-height: 0px;">
+          <div class="sticky-sidebar-wrapper" style="height: 10px;"><div class="sticky-sidebar" style="width: 200px; top: 60px;">
+            <ul class="nav nav-list nav-sidebar" data-toggle="tab">
+            
+								<li class="nav-path-selected active" ><a href="home.html" class="nav-path-selected active active " data-template="replaced: home-link">Home</a></li>
+								<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: features-link">Features list</a></li>
+								<li><a href="developers-guide.html" class="nav-link feature-tab" data-template="replaced: dev-guide-link">Developer's Guide</a></li>
+								<li><a href="diagrams.html" class="nav-link pricing-tab" data-template="replaced: architecture-link">Architecture</a></li>
+								<li><a href="simple-examples.html" class="nav-link" data-template="replaced: examples-link">Binding tutorial</a></li>
+								<li><a href="html-dom-tutorial.html" class="nav-link" data-template="replaced: gui-toolkit-link">DOM handling tutorial</a></li>
+								<li><a href="status.html" class="nav-link" data-template="replaced: status-link">Project status</a></li>
+								<li><a href="https://groups.google.com/d/forum/dragome" class="nav-link" data-template="replaced: support-link" target="#">Mailing List</a></li>
+								<li><a href="support.html" class="nav-link" data-template="replaced: support-link">Support / Help</a></li>
+								<li><a href="license.html" class="nav-link pricing-tab" data-template="replaced: license-link">License</a></li>
+<!--            
+	            <li class="active nav-path-selected"><a href="/about/" target="_self" class="active nav-path-selected">About us</a></li>
+	            <li class=""><a href="/about/team/" target="_self" class="">Leadership Team</a></li>
+	            <li class=""><a href="/about/investors/" target="_self" class="">Investors</a></li>
+	            <li class=""><a href="/about/careers/" target="_self" class="">Careers</a></li>
+-->
+            </ul>          
+            
+            
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <br> <br> 
+			<input type="hidden" name="cmd" value="_s-xclick">
+			 <input type="hidden" name="hosted_button_id" value="BLT2RG6BFKZY8"> 
+			 <input type="image" border="0" src="images/donate-with-paypal.jpg" name="submit" alt="PayPal - The safer, easier way to pay online!"><br> 
+		</form>
+		
+		            <a class="twitter-timeline" href="https://twitter.com/DragomeSDK" data-widget-id="563180963262627840">Tweets by @DragomeSDK</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+            </div>
+<br><br><div id="example3"><div id="shareme" data-url="http://www.dragome.com/" data-text="Dragome SDK: java to the web" data-title="share this page"></div></div>            
+            </div>          
+        </div>
+      </div>
+				<div class="fc l-page">
+				
+					<div class="fg-12 ">
+						<section class="">
+							<div data-template="replaced: loaded-template-0" id="loaded-template-0" data-component-id="22876238" data-element-id="2084042" class="null"><h1>What is Dragome?</h1>
+<p>Dragome is an open source tool for creating client side web applications in pure Java (JVM) language.
+<br>Based on bytecode to javascript compilation, you can execute applications written in Java directly on browsers.
+<br>You may use your favorite IDE, your favorite Java frameworks and tools because Dragome is totally transparent.</p>
+<hr>
+<h3>See it in action: how Eclipse and Chrome interact on debug mode and production mode.</h3>
+<p><iframe width="640" height="360" src="//www.youtube.com/embed/WyseTuRZkNk" frameborder="0" allowfullscreen=""></iframe></p>
+<p>Also take a look at these <a href="https://github.com/dragome/dragome-examples" data-template="replaced: link-0" target="#" data-component-id="17278059" onclick="_ed.onEvent()" data-element-id="5158896">example applications</a></p>
+<hr>
+<h2>Concept</h2>
+<p>Dragome is implemented using several open source projects as a base. Many of them were adapted to match requirements, solving inherited bugs, adding new features, and making them all run together as an emergent new piece of software.</p>
+<p>Folllowing diagram shows the hidden complexity behind the simple concepts exposed by the SDK.
+<br>You can see which part was implemented from scratch, which one was used as base project, and also which are the required tools it depends on.</p>
+<p><img src="dragome-dependencies.png" alt="dragome dependencies"></p>
+<hr>
+<h2>Why Dragome</h2>
+<ul>
+<li>Full Java stack web applications, code everything in Java (server side and client side). It will be transformed to javascript automatically.</li>
+<li>Fast GUI development using components, builders and two-way databinding, using similar AngularJs concepts.</li>
+<li>Debug mode for debugging in your favorite Java IDE.</li>
+<li>No IDE plugins or browser plugins required.</li>
+<li>Java 8 ready. Build your pages using lambda expressions, default methods, streams</li>
+<li>You can use <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html" data-template="replaced: link-1" target="#" data-component-id="10487115" onclick="_ed.onEvent()" data-element-id="5350168">Dynamic Proxies</a> and <a href="http://docs.oracle.com/javase/tutorial/reflect/" data-template="replaced: link-2" target="#" data-component-id="11523885" onclick="_ed.onEvent()" data-element-id="11789915">Java Reflection API</a></li>
+<li>Get rid of callbacks hell: Make async calls with no callbacks! How? See <a href="callback-evictor.html" data-template="replaced: link-3" data-component-id="9178310" onclick="_ed.onEvent()" data-element-id="4549233">Callback Evictor</a> Tool!</li>
+<li>Use continuation in your development: you can pause your resulting js program and continue it whenever you need.</li>
+<li>Unit testing integration: you can also run your Junit tests on a browser.</li>
+<li>Javascript native interface for low level component construction.</li>
+<li>Very powerful template engine. No logic in HTML files, only ids for locating templates placeholders.</li>
+<li>… more at <a href="features.html" data-template="replaced: link-4" data-component-id="7796524" onclick="_ed.onEvent()" data-element-id="15399111">Features</a></li>
+</ul>
+<p>Also see <a href="todos.html" data-template="replaced: link-5" data-component-id="9171721" onclick="_ed.onEvent()" data-element-id="9299361">Dragome Todos</a> for more info about the future</p>
+<hr>
+<h2>Dragome SDK modules</h2>
+<p>Dragome SDK can be divided into following six major parts:</p>
+<ul>
+<li><strong>Bytecode to JavaScript compiler</strong> : Dragome compiler is used to translate all the application code written in Java into JavaScript. Within compilation process there is a bytecode instrumentation chain that could be configured to add your custom manipulations. Examples of this configuration are CallbackEvictor and MethodLogger plugins, which add javaflow enhancer and custom ASM enhancer to achieve each functionality.</li>
+<li><strong>JRE Emulation library</strong> : Dragome includes a library that emulates a subset of the Java runtime library. Including metaprogramming tools such as reflection and dynamic proxies.</li>
+<li><strong>GUI Toolkit</strong>: The toolkit contains a set of visual basic components such as: Button, Label, Checkbox, Radiobutton, List, Combo, Panel, etc. These components works together with a template engine capable of locating them into HTML logicless templates. Components and template engine are totally decoupled from HTML and css, allowing the addition of other UI targets such as Android, IOS, wxWidgets, etc in a near future.</li>
+<li><strong>Form Bindings</strong>: Based on gwt-pectin project this module provides easy data bindings capabilities. It uses a declarative style API (guice style) for defining the models, commands and forms as well as binding them to components. In addition to gwt-pectin classes there is a small layer named “component builder” that helps to create components and binding with less effort.</li>
+<li><strong>Callback evictor</strong>: In charge of getting rid of callback hell, it uses bytecode instrumentation and dynamic proxies to do it.</li>
+<li><strong>Method logger</strong>: Simple method interceptor for automatic model changes detection, it also make use of bytecode instrumentations. It's commonly used by component builder layer to detects model changes in two-ways databinding.</li>
+</ul>
+<h3>Execution modes</h3>
+<p>Dragome provides two execution modes, production mode for executing everything in client side, and debug mode that executes all in Java Virtual Machine without compiling to javascript and make remotes updates to browser DOM.</p>
+<hr>
+<p>SDKs comparison</p>
+<div class="markdown-body">
+<table>
+<thead><tr>
+<th align="left">Features</th>
+<th align="left">Dragome</th>
+<th align="left">GWT</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">Generates js from</td>
+<td align="left">bytecode (produced by several JVM languages)</td>
+<td align="left">java source code</td>
+</tr>
+<tr>
+<td align="left">Requirements for debug</td>
+<td align="left">Any modern browser, no plugin required for IDE or browser</td>
+<td align="left">IDE plugin and Browser plugin, not available for all browsers</td>
+</tr>
+<tr>
+<td align="left">JDK changes impact</td>
+<td align="left">Almost no impact because bytecode rarely changes</td>
+<td align="left">Big impact in every new JDK version because java syntax changes frequently</td>
+</tr>
+<tr>
+<td align="left">Incremental compiler</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Java 8</td>
+<td align="left">Lambda expressions, Stream API, default methods, and static interface methods available</td>
+<td align="left">not supported</td>
+</tr>
+<tr>
+<td align="left">Continuation</td>
+<td align="left">yes (through javaflow)</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Reflection</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Dynamic Proxies</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Bytecode instrumentation</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">DOM level debug</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Code permutations</td>
+<td align="left">-</td>
+<td align="left">yes</td>
+</tr>
+<tr>
+<td align="left">Split compiling</td>
+<td align="left">-</td>
+<td align="left">yes</td>
+</tr>
+<tr>
+<td align="left">Template Engine</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Two-way databinding for UI</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Make async calls with no callbacks</td>
+<td align="left">yes</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p></p><div class="footer-strip footer-force" style="color: #AAAAAA">
+					<div class="l-page fc">
+						<h4 class="fg-8 semi-bold">Learn how to bind components in Dragome in 5'</h4>
+						<div class="fg-4 omega align-right top-space-small">
+							<a href="simple-examples.html" class="btn" data-template="replaced: link-6" data-component-id="10529952" onclick="_ed.onEvent()" data-element-id="1665676">DRAGOME 5' TUTORIAL</a>
+						</div>
+					</div>
+				</div><p></p>
+<hr>
+<h3>Start working with Dragome</h3>
+<h4>Using maven archetype</h4>
+<pre class="prettyprint language-shell java-mod prettyprinted"><code><span class="pln">mvn archetype</span><span class="pun">:</span><span class="pln">generate </span><span class="pun">-</span><span class="typ">DarchetypeGroupId</span><span class="pun">=</span><span class="pln">com</span><span class="pun">.</span><span class="pln">dragome </span><span class="pun">-</span><span class="typ">DarchetypeArtifactId</span><span class="pun">=</span><span class="pln">simple</span><span class="pun">-</span><span class="pln">webapp</span><span class="pun">-</span><span class="pln">archetype </span><span class="pun">-</span><span class="typ">DarchetypeVersion</span><span class="pun">=</span><span class="lit">1.0</span><span class="pln"> </span><span class="pun">-</span><span class="typ">DgroupId</span><span class="pun">={</span><span class="pln">your</span><span class="pun">-</span><span class="kwd">package</span><span class="pun">-</span><span class="pln">name</span><span class="pun">}</span><span class="pln"> </span><span class="pun">-</span><span class="typ">DartifactId</span><span class="pun">={</span><span class="pln">your</span><span class="pun">-</span><span class="pln">app</span><span class="pun">-</span><span class="pln">name</span><span class="pun">}</span></code></pre>
+<hr>
+<h4>Using maven dependency in your project</h4>
+<pre class="prettyprint language-xml java-mod prettyprinted"><code><span class="tag">&lt;dependency&gt;</span><span class="pln">
+  </span><span class="tag">&lt;groupId&gt;</span><span class="pln">com.dragome</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+  </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">dragome-sdk</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+  </span><span class="tag">&lt;version&gt;</span><span class="pln">0.95.1-beta1</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+  </span><span class="tag">&lt;type&gt;</span><span class="pln">pom</span><span class="tag">&lt;/type&gt;</span><span class="pln">
+</span><span class="tag">&lt;/dependency&gt;</span></code></pre>
+<hr>
+<h4>Clone and build</h4>
+<p><a href="how-to-build.html" data-template="replaced: link-7" data-component-id="399615" onclick="_ed.onEvent()" data-element-id="8705821">How to build the SDK</a></p>
+<hr>
+<h4>Setup example application</h4>
+<p><a href="app-setup.html" data-template="replaced: link-8" data-component-id="4993303" onclick="_ed.onEvent()" data-element-id="19482293">Setup your application</a></p>
+<hr>
+<h3>How is programming web apps with Dragome?</h3>
+<p><strong>pure Java, pure HTML, runs as js inside browser!</strong></p>
+<h3>Debug your application in Java with your favorite IDE</h3>
+<p><iframe width="640" height="360" src="//www.youtube.com/embed/ktlMWKNVhgo" frameborder="0" allowfullscreen=""></iframe></p>
+<hr>
+<h3>Want to contribute?</h3>
+<ul>
+<li>Fork the project on Github.</li>
+<li>Create an issue or fix one from the <a href="https://github.com/dragome/dragome-sdk/issues" data-template="replaced: link-9" target="#" data-component-id="6331534" onclick="_ed.onEvent()" data-element-id="32906687">issues list</a>.</li>
+<li>Share your ideas or ask questions on mailing list - don't hesitate to write a reply - that helps us improve javadocs/FAQ.</li>
+<li>If you miss a particular feature - browse or ask on the <a href="https://groups.google.com/d/forum/dragome" data-template="replaced: link-10" target="#" data-component-id="19462128" onclick="_ed.onEvent()" data-element-id="28680911">mailing list</a> - don't hesitate to write a reply, show us a sample code and describe the problem.</li>
+<li>Write a blog post about how you use or extend Dragome.</li>
+<li>Please suggest changes to javadoc/exception messages when you find something unclear.</li>
+<li>If you have problems with documentation, find it non intuitive or hard to follow - let us know about it, we'll try to make it better according to your suggestions. Any constructive critique is greatly appreciated. Don't forget that this is an open source project developed and documented in spare time.</li>
+</ul>
+<hr>
+<h3>Take a look at the following source code:</h3>
+<p>This is the complete source code for a simple hello world application using a service.</p>
+<p>For more details see <a href="helloworld-app.html" data-template="replaced: link-11" data-component-id="24473218" onclick="_ed.onEvent()" data-element-id="27785407">Hello World Application</a></p>
+<p><strong>Service definition</strong></p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">interface</span><span class="pln"> </span><span class="typ">HelloWorldService</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">abstract</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getGreetingsFor</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> name</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Service implementation</strong></p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">HelloWolrdServiceImpl</span><span class="pln"> </span><span class="kwd">implements</span><span class="pln"> </span><span class="typ">HelloWorldService</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getGreetingsFor</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> name</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="str">"Hello "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> name </span><span class="pun">+</span><span class="pln"> </span><span class="str">"! ("</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">")"</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Service consumer - GUI</strong></p>
+<pre class="prettyprint language-java java-mod prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">HelloWorldPage</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">DragomeVisualActivity</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="typ">HelloWorldService</span><span class="pln"> helloWorldService</span><span class="pun">=</span><span class="pln"> serviceFactory</span><span class="pun">.</span><span class="pln">createSyncService</span><span class="pun">(</span><span class="typ">HelloWorldService</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> build</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">VisualLabel</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="pln"> label</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">VisualLabelImpl</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;(</span><span class="str">"message"</span><span class="pun">);</span><span class="pln">
+        </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">VisualButton</span><span class="pln"> button</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">VisualButtonImpl</span><span class="pun">(</span><span class="str">"button"</span><span class="pun">,</span><span class="pln"> v </span><span class="pun">-&gt;</span><span class="pln"> label</span><span class="pun">.</span><span class="pln">setValue</span><span class="pun">(</span><span class="pln">helloWorldService</span><span class="pun">.</span><span class="pln">getGreetingsFor</span><span class="pun">(</span><span class="str">"World"</span><span class="pun">)));</span><span class="pln">
+        mainPanel</span><span class="pun">.</span><span class="pln">addChild</span><span class="pun">(</span><span class="pln">label</span><span class="pun">);</span><span class="pln">
+        mainPanel</span><span class="pun">.</span><span class="pln">addChild</span><span class="pun">(</span><span class="pln">button</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>HTML</strong></p>
+<pre class="prettyprint language-html java-mod prettyprinted"><code><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"dragome/dragome.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+    Message: </span><span class="tag">&lt;b</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"message"</span><span class="tag">&gt;</span><span class="pln">text</span><span class="tag">&lt;/b&gt;</span><span class="pln"> </span><span class="tag">&lt;br&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-template</span><span class="pun">=</span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">Say hello!</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/html&gt;</span></code></pre>
+</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer class="footer">
+		<!--footer strip -->
+		<!--footer links-->
+		<div class="l-page clearfix footer-wrapper">
+			<div class="fg-6">
+				<div class="fg-4">
+					<ul class="fmenu">
+						<li class="fhead">Dragome</li>
+						<li class="nav-path-selected active" ><a href="home.html" class="nav-link product-tab active" data-template="replaced: footer-home-link">Home</a></li>
+						<li><a href="http://dragome-sdk.blogspot.com" class="nav-link">Blog</a></li>
+						<li><a href="features.html" class="nav-link feature-tab" data-template="replaced: footer-features-link">Features</a></li>
+						<li><a href="dragome.html" class="nav-link feature-tab">Documentation</a></li>
+						<li><a href="dragome.html" class="nav-link pricing-tab">License</a></li>
+						<li><a href="dragome.html" class="nav-link">Support</a></li>
+						<li><a href="dragome.html" class="nav-link">About</a></li>
+					</ul>
+				</div>
+				<div class="fg-5">
+					<ul class="fmenu">
+						<li class="fhead">Demo applications</li>
+						<li><a href="http://www.dragome.com/pricing/free-support-software/">Flashcards</a></li>
+						<li><a href="http://www.dragome.com/pricing/day-pass/">Person crud</a></li>
+						<li><a href="http://www.dragome.com/free-support-tools/help-desk-plugin-mobile-apps">Sync tree views</a></li>
+					</ul>
+				</div>
+				<div class="fg-3 omega">
+					<ul class="fmenu">
+						<li class="fhead">Support</li>
+						<li><a href="http://support.dragome.com/">Help &amp; Support</a></li>
+						<li><a href="http://www.dragome.com/api">API</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fg-6 omega f-s-div">
+				<div class="fg-6">
+					<!--</ul>-->
+					<ul class="f-social">
+						<li>Connect with us</li>
+						<li class="top-space-small" id="footer-social-icons"><a target="_blank" href="https://www.linkedin.com/groups/Dragome-6782769"><i class="icon-linkedin"></i></a> <a target="_blank" href="https://www.facebook.com/dragome.sdk"><i class="icon-facebook"></i></a> <a target="_blank" href="https://twitter.com/DragomeSDK"><i class="icon-twitter"></i></a> <a target="_blank" href="https://www.youtube.com/channel/UCXZjcxseYx7hMUisAdow41Q"><i class="icon-youtube"></i></a> <a target="_blank" href="https://plus.google.com/113913443614620222247/posts/p/pub"><i class="icon-google-plus"></i></a></li>
+					</ul>
+					<div class="fc top-space-large app-widget">
+						<span class="apple"> <a href=""> </a>
+						</span> <span class="android"> <a href=""></a>
+						</span>
+					</div>
+				</div>
+				<div class="fg-6 omega blog-contacts">
+					<ul class="f-contact">
+						<li>Contact Us</li>
+						<li class="top-space-small fc"><i class="icon-envelope-alt"></i> <span class="f-mail-span"><a href="mailto:support@dragome.com" class="f-mail"> support@dragome.com</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="l-page fc copy-separator">
+			<div class="fg-6 footer-bottom-link">
+				<ul class="clearfix">
+					<li><a href="http://www.dragome.com/terms">TERMS OF SERVICE</a></li>
+					<li><a href="http://www.dragome.com/privacy">PRIVACY POLICY</a></li>
+					<li><a href="http://www.dragome.com/security">SECURITY</a></li>
+					<li><a href="http://www.dragome.com/sitemap">SITEMAP</a></li>
+				</ul>
+			</div>
+			<div class="fg-5 omega copy">Copyright © Dragome. All Rights Reserved.</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/forkit.js"></script>
+
+	<a href="https://plus.google.com/113913443614620222247" rel="publisher">Google+</a>
+</div></body><div class="dragome-hide"></div>

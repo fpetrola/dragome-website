@@ -1,0 +1,105 @@
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 200;
+	src: local('Source Sans Pro ExtraLight'),
+		local('SourceSansPro-ExtraLight'),
+		url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMa9awK0IKUjIWABZIchFI8.woff)
+		format('woff');
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
+		url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff)
+		format('woff');
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
+		url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff)
+		format('woff');
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+		url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff)
+		format('woff');
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Source Sans Pro Black'), local('SourceSansPro-Black'),
+		url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff)
+		format('woff');
+}
+
+.java-mod {
+	font-size: 1em;
+	width: auto !important;
+	height: auto !important;
+	float: inherit !important;
+/* position: absolute !important; */
+	margin-left: 0 !important;
+/* 	-webkit-box-shadow: 0 0 20px #044; */
+/* 	-moz-box-shadow: 0 0 20px #005; */
+}
+
+pre.prettyprint,code.prettyprint {
+/* 	background-color: #000; */
+/* 	-moz-border-radius: 8px; */
+/* 	-webkit-border-radius: 8px; */
+/* 	-o-border-radius: 8px; */
+/* 	-ms-border-radius: 8px; */
+/* 	-khtml-border-radius: 8px; */
+/* 	border-radius: 8px; */
+}
+
+div.prettyprint {
+	background-color: #222;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	width: 70% !important;
+	overflow: auto;
+}
+.snippet pre.prettyprint,.snippet pre.prettyprint code{white-space:pre;word-wrap:normal;}
+
+pre.prettyprint {
+	display: inline-block !important;
+	padding: 0.7em;
+	white-space: pre-wrap;
+/* 	margin: 20px; */
+	font-size: 0.9em;
+}
+
+pre.large-lines {
+	width: 1500px !important;
+}
+
+section p
+{
+	//line-height: 34px;
+	font-size: 1.2em;
+}
+
+section li
+{
+/* 	margin-left: 1.9em; */
+	font-size: 19px;
+	font-weight: 300;
+}
+
